@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\bin\Release\net6.0\Records.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\bin\Release\net6.0\Records.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\bin\Release\net6.0\Records.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\bin\Release\net6.0\Records.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\bin\Release\net6.0\ref\Records.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\bin\Release\net6.0\Records.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\ref\Records.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Records\obj\Release\net6.0\Records.genruntimeconfig.cache

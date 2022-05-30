@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\bin\Debug\net6.0\WeatherApi.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\bin\Debug\net6.0\WeatherApi.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\bin\Debug\net6.0\WeatherApi.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\bin\Debug\net6.0\WeatherApi.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\bin\Debug\net6.0\ref\WeatherApi.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\bin\Debug\net6.0\WeatherApi.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\ref\WeatherApi.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\WeatherApi\obj\Debug\net6.0\WeatherApi.genruntimeconfig.cache
