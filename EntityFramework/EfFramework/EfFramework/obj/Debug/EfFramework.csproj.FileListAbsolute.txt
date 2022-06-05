@@ -1,0 +1,13 @@
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\obj\Debug\EfFramework.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\obj\Debug\EfFramework.csproj.SuggestedBindingRedirects.cache
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\obj\Debug\EfFramework.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EfFramework.exe.config
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EfFramework.exe
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EfFramework.pdb
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EntityFramework.dll
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EntityFramework.xml
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\obj\Debug\EfFramework.csproj.CopyComplete
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\obj\Debug\EfFramework.exe
+C:\Work\FBMS_1211_RU\EntityFramework\EfFramework\EfFramework\obj\Debug\EfFramework.pdb

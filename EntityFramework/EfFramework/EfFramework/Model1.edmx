@@ -1,0 +1,3238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AcademyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Assistants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Curators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Deans">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Building" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FacultyId" Type="int" Nullable="false" />
+          <Property Name="HeadId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Faculties">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Building" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DeanId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="DepartmentId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GroupsCurators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CuratorId" Type="int" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GroupsLectures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="LectureId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Heads">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LectureRooms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Building" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lectures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectId" Type="int" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MSpeer_conflictdetectionconfigrequest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="sent_date" Type="datetime" Nullable="false" />
+          <Property Name="timeout" Type="int" Nullable="false" />
+          <Property Name="modified_date" Type="datetime" Nullable="false" />
+          <Property Name="progress_phase" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="phase_timed_out" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpeer_conflictdetectionconfigresponse' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpeer_conflictdetectionconfigresponse">
+          <Key>
+            <PropertyRef Name="request_id" />
+            <PropertyRef Name="peer_node" />
+            <PropertyRef Name="peer_db" />
+            <PropertyRef Name="progress_phase" />
+          </Key>
+          <Property Name="request_id" Type="int" Nullable="false" />
+          <Property Name="peer_node" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="peer_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="peer_version" Type="int" />
+          <Property Name="peer_db_version" Type="int" />
+          <Property Name="is_peer" Type="bit" />
+          <Property Name="conflictdetection_enabled" Type="bit" />
+          <Property Name="originator_id" Type="int" />
+          <Property Name="peer_conflict_retention" Type="int" />
+          <Property Name="peer_continue_onconflict" Type="bit" />
+          <Property Name="peer_subscriptions" Type="xml" />
+          <Property Name="progress_phase" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="modified_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MSpeer_lsns">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="last_updated" Type="datetime" />
+          <Property Name="originator" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_publication_id" Type="int" />
+          <Property Name="originator_db_version" Type="int" />
+          <Property Name="originator_lsn" Type="varbinary" MaxLength="16" />
+          <Property Name="originator_version" Type="int" />
+          <Property Name="originator_id" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpeer_originatorid_history' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpeer_originatorid_history">
+          <Key>
+            <PropertyRef Name="originator_publication" />
+            <PropertyRef Name="originator_id" />
+            <PropertyRef Name="originator_node" />
+            <PropertyRef Name="originator_db" />
+            <PropertyRef Name="originator_db_version" />
+            <PropertyRef Name="originator_version" />
+            <PropertyRef Name="inserted_date" />
+          </Key>
+          <Property Name="originator_publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_id" Type="int" Nullable="false" />
+          <Property Name="originator_node" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_db_version" Type="int" Nullable="false" />
+          <Property Name="originator_version" Type="int" Nullable="false" />
+          <Property Name="inserted_date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpeer_request' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpeer_request">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="publication" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="sent_date" Type="datetime" />
+          <Property Name="description" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpeer_response' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpeer_response">
+          <Key>
+            <PropertyRef Name="peer" />
+            <PropertyRef Name="peer_db" />
+          </Key>
+          <Property Name="request_id" Type="int" />
+          <Property Name="peer" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="peer_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="received_date" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpeer_topologyrequest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpeer_topologyrequest">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="publication" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="sent_date" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpeer_topologyresponse' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpeer_topologyresponse">
+          <Key>
+            <PropertyRef Name="peer" />
+            <PropertyRef Name="peer_db" />
+          </Key>
+          <Property Name="request_id" Type="int" />
+          <Property Name="peer" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="peer_version" Type="int" />
+          <Property Name="peer_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="originator_id" Type="int" />
+          <Property Name="peer_conflict_retention" Type="int" />
+          <Property Name="received_date" Type="datetime" />
+          <Property Name="connection_info" Type="xml" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.MSpub_identity_range' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSpub_identity_range">
+          <Key>
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="range" />
+            <PropertyRef Name="pub_range" />
+            <PropertyRef Name="current_pub_range" />
+            <PropertyRef Name="threshold" />
+          </Key>
+          <Property Name="objid" Type="int" Nullable="false" />
+          <Property Name="range" Type="bigint" Nullable="false" />
+          <Property Name="pub_range" Type="bigint" Nullable="false" />
+          <Property Name="current_pub_range" Type="bigint" Nullable="false" />
+          <Property Name="threshold" Type="int" Nullable="false" />
+          <Property Name="last_seed" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Schedules">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Class" Type="int" Nullable="false" />
+          <Property Name="DayOfWeek" Type="int" Nullable="false" />
+          <Property Name="Week" Type="int" Nullable="false" />
+          <Property Name="LectureId" Type="int" Nullable="false" />
+          <Property Name="LectureRoomId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.sysarticlecolumns' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sysarticlecolumns">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="colid" />
+          </Key>
+          <Property Name="artid" Type="int" Nullable="false" />
+          <Property Name="colid" Type="int" Nullable="false" />
+          <Property Name="is_udt" Type="bit" />
+          <Property Name="is_xml" Type="bit" />
+          <Property Name="is_max" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.sysarticles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sysarticles">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="dest_table" />
+            <PropertyRef Name="filter" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="pre_creation_cmd" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="sync_objid" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="fire_triggers_on_snapshot" />
+          </Key>
+          <Property Name="artid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="creation_script" Type="nvarchar" MaxLength="255" />
+          <Property Name="del_cmd" Type="nvarchar" MaxLength="255" />
+          <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="dest_table" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="filter" Type="int" Nullable="false" />
+          <Property Name="filter_clause" Type="nvarchar(max)" />
+          <Property Name="ins_cmd" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="objid" Type="int" Nullable="false" />
+          <Property Name="pubid" Type="int" Nullable="false" />
+          <Property Name="pre_creation_cmd" Type="tinyint" Nullable="false" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+          <Property Name="sync_objid" Type="int" Nullable="false" />
+          <Property Name="type" Type="tinyint" Nullable="false" />
+          <Property Name="upd_cmd" Type="nvarchar" MaxLength="255" />
+          <Property Name="schema_option" Type="binary" MaxLength="8" />
+          <Property Name="dest_owner" Type="nvarchar" MaxLength="128" />
+          <Property Name="ins_scripting_proc" Type="int" />
+          <Property Name="del_scripting_proc" Type="int" />
+          <Property Name="upd_scripting_proc" Type="int" />
+          <Property Name="custom_script" Type="nvarchar" MaxLength="2048" />
+          <Property Name="fire_triggers_on_snapshot" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.sysarticleupdates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sysarticleupdates">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="sync_ins_proc" />
+            <PropertyRef Name="sync_upd_proc" />
+            <PropertyRef Name="sync_del_proc" />
+            <PropertyRef Name="autogen" />
+            <PropertyRef Name="sync_upd_trig" />
+            <PropertyRef Name="identity_support" />
+          </Key>
+          <Property Name="artid" Type="int" Nullable="false" />
+          <Property Name="pubid" Type="int" Nullable="false" />
+          <Property Name="sync_ins_proc" Type="int" Nullable="false" />
+          <Property Name="sync_upd_proc" Type="int" Nullable="false" />
+          <Property Name="sync_del_proc" Type="int" Nullable="false" />
+          <Property Name="autogen" Type="bit" Nullable="false" />
+          <Property Name="sync_upd_trig" Type="int" Nullable="false" />
+          <Property Name="conflict_tableid" Type="int" />
+          <Property Name="ins_conflict_proc" Type="int" />
+          <Property Name="identity_support" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syspublications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syspublications">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="repl_freq" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="sync_method" />
+            <PropertyRef Name="independent_agent" />
+            <PropertyRef Name="immediate_sync" />
+            <PropertyRef Name="enabled_for_internet" />
+            <PropertyRef Name="allow_push" />
+            <PropertyRef Name="allow_pull" />
+            <PropertyRef Name="allow_anonymous" />
+            <PropertyRef Name="immediate_sync_ready" />
+            <PropertyRef Name="allow_sync_tran" />
+            <PropertyRef Name="autogen_sync_procs" />
+            <PropertyRef Name="allow_queued_tran" />
+            <PropertyRef Name="snapshot_in_defaultfolder" />
+            <PropertyRef Name="compress_snapshot" />
+            <PropertyRef Name="ftp_port" />
+            <PropertyRef Name="allow_dts" />
+            <PropertyRef Name="allow_subscription_copy" />
+            <PropertyRef Name="backward_comp_level" />
+            <PropertyRef Name="allow_initialize_from_backup" />
+            <PropertyRef Name="options" />
+          </Key>
+          <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="pubid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="repl_freq" Type="tinyint" Nullable="false" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+          <Property Name="sync_method" Type="tinyint" Nullable="false" />
+          <Property Name="snapshot_jobid" Type="binary" MaxLength="16" />
+          <Property Name="independent_agent" Type="bit" Nullable="false" />
+          <Property Name="immediate_sync" Type="bit" Nullable="false" />
+          <Property Name="enabled_for_internet" Type="bit" Nullable="false" />
+          <Property Name="allow_push" Type="bit" Nullable="false" />
+          <Property Name="allow_pull" Type="bit" Nullable="false" />
+          <Property Name="allow_anonymous" Type="bit" Nullable="false" />
+          <Property Name="immediate_sync_ready" Type="bit" Nullable="false" />
+          <Property Name="allow_sync_tran" Type="bit" Nullable="false" />
+          <Property Name="autogen_sync_procs" Type="bit" Nullable="false" />
+          <Property Name="retention" Type="int" />
+          <Property Name="allow_queued_tran" Type="bit" Nullable="false" />
+          <Property Name="snapshot_in_defaultfolder" Type="bit" Nullable="false" />
+          <Property Name="alt_snapshot_folder" Type="nvarchar" MaxLength="255" />
+          <Property Name="pre_snapshot_script" Type="nvarchar" MaxLength="255" />
+          <Property Name="post_snapshot_script" Type="nvarchar" MaxLength="255" />
+          <Property Name="compress_snapshot" Type="bit" Nullable="false" />
+          <Property Name="ftp_address" Type="nvarchar" MaxLength="128" />
+          <Property Name="ftp_port" Type="int" Nullable="false" />
+          <Property Name="ftp_subdirectory" Type="nvarchar" MaxLength="255" />
+          <Property Name="ftp_login" Type="nvarchar" MaxLength="128" />
+          <Property Name="ftp_password" Type="nvarchar" MaxLength="524" />
+          <Property Name="allow_dts" Type="bit" Nullable="false" />
+          <Property Name="allow_subscription_copy" Type="bit" Nullable="false" />
+          <Property Name="centralized_conflicts" Type="bit" />
+          <Property Name="conflict_retention" Type="int" />
+          <Property Name="conflict_policy" Type="int" />
+          <Property Name="queue_type" Type="int" />
+          <Property Name="ad_guidname" Type="nvarchar" MaxLength="128" />
+          <Property Name="backward_comp_level" Type="int" Nullable="false" />
+          <Property Name="allow_initialize_from_backup" Type="bit" Nullable="false" />
+          <Property Name="min_autonosync_lsn" Type="binary" MaxLength="10" />
+          <Property Name="replicate_ddl" Type="int" />
+          <Property Name="options" Type="int" Nullable="false" />
+          <Property Name="originator_id" Type="int" />
+        </EntityType>
+        <EntityType Name="sysreplservers">
+          <Key>
+            <PropertyRef Name="srvname" />
+          </Key>
+          <Property Name="srvname" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="srvid" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.sysschemaarticles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sysschemaarticles">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="dest_object" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="pre_creation_cmd" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="type" />
+          </Key>
+          <Property Name="artid" Type="int" Nullable="false" />
+          <Property Name="creation_script" Type="nvarchar" MaxLength="255" />
+          <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="dest_object" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="objid" Type="int" Nullable="false" />
+          <Property Name="pubid" Type="int" Nullable="false" />
+          <Property Name="pre_creation_cmd" Type="tinyint" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="type" Type="tinyint" Nullable="false" />
+          <Property Name="schema_option" Type="binary" MaxLength="8" />
+          <Property Name="dest_owner" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syssubscriptions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syssubscriptions">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="srvid" />
+            <PropertyRef Name="dest_db" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="sync_type" />
+            <PropertyRef Name="login_name" />
+            <PropertyRef Name="subscription_type" />
+            <PropertyRef Name="timestamp" />
+            <PropertyRef Name="update_mode" />
+            <PropertyRef Name="loopback_detection" />
+            <PropertyRef Name="queued_reinit" />
+            <PropertyRef Name="nosync_type" />
+            <PropertyRef Name="srvname" />
+          </Key>
+          <Property Name="artid" Type="int" Nullable="false" />
+          <Property Name="srvid" Type="smallint" Nullable="false" />
+          <Property Name="dest_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+          <Property Name="sync_type" Type="tinyint" Nullable="false" />
+          <Property Name="login_name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="subscription_type" Type="int" Nullable="false" />
+          <Property Name="distribution_jobid" Type="binary" MaxLength="16" />
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="update_mode" Type="tinyint" Nullable="false" />
+          <Property Name="loopback_detection" Type="bit" Nullable="false" />
+          <Property Name="queued_reinit" Type="bit" Nullable="false" />
+          <Property Name="nosync_type" Type="tinyint" Nullable="false" />
+          <Property Name="srvname" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.systranschemas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="systranschemas">
+          <Key>
+            <PropertyRef Name="tabid" />
+            <PropertyRef Name="startlsn" />
+            <PropertyRef Name="endlsn" />
+            <PropertyRef Name="typeid" />
+          </Key>
+          <Property Name="tabid" Type="int" Nullable="false" />
+          <Property Name="startlsn" Type="binary" MaxLength="10" Nullable="false" />
+          <Property Name="endlsn" Type="binary" MaxLength="10" Nullable="false" />
+          <Property Name="typeid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teachers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tutors">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StaffId" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Password" Type="binary" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3035444131374545' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3035444131374545">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Login" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Password" Type="binary" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3038394244463041' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3038394244463041">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Building" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Building" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3045423137443445' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3045423137443445">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3138324637443239' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3138324637443239">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Surname" />
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3141323845433736' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3141323845433736">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3141454244323645' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3141454244323645">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="DepartmentId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3232383545423244' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3232383545423244">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3244334339463136' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3244334339463136">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="SubjectId" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectId" Type="int" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3346333241374434' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3346333241374434">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="CuratorId" />
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CuratorId" Type="int" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3638394345374546' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3638394345374546">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x3930444345393738' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x3930444345393738">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="GroupId" />
+            <PropertyRef Name="LectureId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="LectureId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4144384533353531' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4144384533353531">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4145464634383043' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4145464634383043">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Building" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="FacultyId" />
+            <PropertyRef Name="HeadId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Building" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FacultyId" Type="int" Nullable="false" />
+          <Property Name="HeadId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4234303944444541' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4234303944444541">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Building" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="DeanId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Building" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DeanId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4244443833453936' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4244443833453936">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Class" />
+            <PropertyRef Name="DayOfWeek" />
+            <PropertyRef Name="Week" />
+            <PropertyRef Name="LectureId" />
+            <PropertyRef Name="LectureRoomId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Class" Type="int" Nullable="false" />
+          <Property Name="DayOfWeek" Type="int" Nullable="false" />
+          <Property Name="Week" Type="int" Nullable="false" />
+          <Property Name="LectureId" Type="int" Nullable="false" />
+          <Property Name="LectureRoomId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4335364237313041' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4335364237313041">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Surname" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4634313333333132' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4634313333333132">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StaffId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.syncobj_0x4635443342323534' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="syncobj_0x4635443342323534">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Academy.dbo.sysextendedarticlesview' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sysextendedarticlesview">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="dest_table" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="pre_creation_cmd" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="fire_triggers_on_snapshot" />
+          </Key>
+          <Property Name="artid" Type="int" Nullable="false" />
+          <Property Name="creation_script" Type="nvarchar" MaxLength="255" />
+          <Property Name="del_cmd" Type="nvarchar" MaxLength="255" />
+          <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="dest_table" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="filter" Type="int" />
+          <Property Name="filter_clause" Type="nvarchar(max)" />
+          <Property Name="ins_cmd" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="objid" Type="int" Nullable="false" />
+          <Property Name="pubid" Type="int" Nullable="false" />
+          <Property Name="pre_creation_cmd" Type="tinyint" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="sync_objid" Type="int" />
+          <Property Name="type" Type="tinyint" Nullable="false" />
+          <Property Name="upd_cmd" Type="nvarchar" MaxLength="255" />
+          <Property Name="schema_option" Type="binary" MaxLength="8" />
+          <Property Name="dest_owner" Type="nvarchar" MaxLength="128" />
+          <Property Name="ins_scripting_proc" Type="int" />
+          <Property Name="del_scripting_proc" Type="int" />
+          <Property Name="upd_scripting_proc" Type="int" />
+          <Property Name="custom_script" Type="nvarchar" MaxLength="2048" />
+          <Property Name="fire_triggers_on_snapshot" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Assistant__Teach__6477ECF3">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="Assistants" Type="Self.Assistants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Assistants">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Curators__Teache__656C112C">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="Curators" Type="Self.Curators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Curators">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Deans__TeacherId__66603565">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="Deans" Type="Self.Deans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Deans">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Facul__6754599E">
+          <End Role="Faculties" Type="Self.Faculties" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Faculties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="FacultyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__HeadI__68487DD7">
+          <End Role="Heads" Type="Self.Heads" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Heads">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="HeadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Faculties__DeanI__693CA210">
+          <End Role="Deans" Type="Self.Deans" Multiplicity="1" />
+          <End Role="Faculties" Type="Self.Faculties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Deans">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Faculties">
+              <PropertyRef Name="DeanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Groups__Departme__6A30C649">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Groups">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsCur__Curat__6B24EA82">
+          <End Role="Curators" Type="Self.Curators" Multiplicity="1" />
+          <End Role="GroupsCurators" Type="Self.GroupsCurators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsCurators">
+              <PropertyRef Name="CuratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsCur__Group__6C190EBB">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="GroupsCurators" Type="Self.GroupsCurators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsCurators">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsLec__Group__6D0D32F4">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="GroupsLectures" Type="Self.GroupsLectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsLectures">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsLec__Lectu__6E01572D">
+          <End Role="Lectures" Type="Self.Lectures" Multiplicity="1" />
+          <End Role="GroupsLectures" Type="Self.GroupsLectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lectures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsLectures">
+              <PropertyRef Name="LectureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Heads__TeacherId__6EF57B66">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="Heads" Type="Self.Heads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Heads">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Lectures__Subjec__6FE99F9F">
+          <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+          <End Role="Lectures" Type="Self.Lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lectures">
+              <PropertyRef Name="SubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Lectures__Teache__70DDC3D8">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="Lectures" Type="Self.Lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lectures">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedules__Lectu__71D1E811">
+          <End Role="Lectures" Type="Self.Lectures" Multiplicity="1" />
+          <End Role="Schedules" Type="Self.Schedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lectures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedules">
+              <PropertyRef Name="LectureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedules__Lectu__72C60C4A">
+          <End Role="LectureRooms" Type="Self.LectureRooms" Multiplicity="1" />
+          <End Role="Schedules" Type="Self.Schedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LectureRooms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedules">
+              <PropertyRef Name="LectureRoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tutors__StaffId__33D4B598">
+          <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+          <End Role="Tutors" Type="Self.Tutors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Staff">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tutors">
+              <PropertyRef Name="StaffId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="AcademyModelStoreContainer">
+          <EntitySet Name="Assistants" EntityType="Self.Assistants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Curators" EntityType="Self.Curators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deans" EntityType="Self.Deans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Faculties" EntityType="Self.Faculties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupsCurators" EntityType="Self.GroupsCurators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupsLectures" EntityType="Self.GroupsLectures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Heads" EntityType="Self.Heads" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LectureRooms" EntityType="Self.LectureRooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lectures" EntityType="Self.Lectures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MSpeer_conflictdetectionconfigrequest" EntityType="Self.MSpeer_conflictdetectionconfigrequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MSpeer_lsns" EntityType="Self.MSpeer_lsns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedules" EntityType="Self.Schedules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysreplservers" EntityType="Self.sysreplservers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Test" EntityType="Self.Test" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tutors" EntityType="Self.Tutors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MSpeer_conflictdetectionconfigresponse" EntityType="Self.MSpeer_conflictdetectionconfigresponse" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpeer_conflictdetectionconfigresponse].[request_id] AS [request_id], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_node] AS [peer_node], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_db] AS [peer_db], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_version] AS [peer_version], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_db_version] AS [peer_db_version], 
+    [MSpeer_conflictdetectionconfigresponse].[is_peer] AS [is_peer], 
+    [MSpeer_conflictdetectionconfigresponse].[conflictdetection_enabled] AS [conflictdetection_enabled], 
+    [MSpeer_conflictdetectionconfigresponse].[originator_id] AS [originator_id], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_conflict_retention] AS [peer_conflict_retention], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_continue_onconflict] AS [peer_continue_onconflict], 
+    [MSpeer_conflictdetectionconfigresponse].[peer_subscriptions] AS [peer_subscriptions], 
+    [MSpeer_conflictdetectionconfigresponse].[progress_phase] AS [progress_phase], 
+    [MSpeer_conflictdetectionconfigresponse].[modified_date] AS [modified_date]
+    FROM [dbo].[MSpeer_conflictdetectionconfigresponse] AS [MSpeer_conflictdetectionconfigresponse]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSpeer_originatorid_history" EntityType="Self.MSpeer_originatorid_history" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpeer_originatorid_history].[originator_publication] AS [originator_publication], 
+    [MSpeer_originatorid_history].[originator_id] AS [originator_id], 
+    [MSpeer_originatorid_history].[originator_node] AS [originator_node], 
+    [MSpeer_originatorid_history].[originator_db] AS [originator_db], 
+    [MSpeer_originatorid_history].[originator_db_version] AS [originator_db_version], 
+    [MSpeer_originatorid_history].[originator_version] AS [originator_version], 
+    [MSpeer_originatorid_history].[inserted_date] AS [inserted_date]
+    FROM [dbo].[MSpeer_originatorid_history] AS [MSpeer_originatorid_history]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSpeer_request" EntityType="Self.MSpeer_request" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpeer_request].[id] AS [id], 
+    [MSpeer_request].[publication] AS [publication], 
+    [MSpeer_request].[sent_date] AS [sent_date], 
+    [MSpeer_request].[description] AS [description]
+    FROM [dbo].[MSpeer_request] AS [MSpeer_request]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSpeer_response" EntityType="Self.MSpeer_response" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpeer_response].[request_id] AS [request_id], 
+    [MSpeer_response].[peer] AS [peer], 
+    [MSpeer_response].[peer_db] AS [peer_db], 
+    [MSpeer_response].[received_date] AS [received_date]
+    FROM [dbo].[MSpeer_response] AS [MSpeer_response]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSpeer_topologyrequest" EntityType="Self.MSpeer_topologyrequest" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpeer_topologyrequest].[id] AS [id], 
+    [MSpeer_topologyrequest].[publication] AS [publication], 
+    [MSpeer_topologyrequest].[sent_date] AS [sent_date]
+    FROM [dbo].[MSpeer_topologyrequest] AS [MSpeer_topologyrequest]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSpeer_topologyresponse" EntityType="Self.MSpeer_topologyresponse" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpeer_topologyresponse].[request_id] AS [request_id], 
+    [MSpeer_topologyresponse].[peer] AS [peer], 
+    [MSpeer_topologyresponse].[peer_version] AS [peer_version], 
+    [MSpeer_topologyresponse].[peer_db] AS [peer_db], 
+    [MSpeer_topologyresponse].[originator_id] AS [originator_id], 
+    [MSpeer_topologyresponse].[peer_conflict_retention] AS [peer_conflict_retention], 
+    [MSpeer_topologyresponse].[received_date] AS [received_date], 
+    [MSpeer_topologyresponse].[connection_info] AS [connection_info]
+    FROM [dbo].[MSpeer_topologyresponse] AS [MSpeer_topologyresponse]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSpub_identity_range" EntityType="Self.MSpub_identity_range" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSpub_identity_range].[objid] AS [objid], 
+    [MSpub_identity_range].[range] AS [range], 
+    [MSpub_identity_range].[pub_range] AS [pub_range], 
+    [MSpub_identity_range].[current_pub_range] AS [current_pub_range], 
+    [MSpub_identity_range].[threshold] AS [threshold], 
+    [MSpub_identity_range].[last_seed] AS [last_seed]
+    FROM [dbo].[MSpub_identity_range] AS [MSpub_identity_range]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysarticlecolumns" EntityType="Self.sysarticlecolumns" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysarticlecolumns].[artid] AS [artid], 
+    [sysarticlecolumns].[colid] AS [colid], 
+    [sysarticlecolumns].[is_udt] AS [is_udt], 
+    [sysarticlecolumns].[is_xml] AS [is_xml], 
+    [sysarticlecolumns].[is_max] AS [is_max]
+    FROM [dbo].[sysarticlecolumns] AS [sysarticlecolumns]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysarticles" EntityType="Self.sysarticles" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysarticles].[artid] AS [artid], 
+    [sysarticles].[creation_script] AS [creation_script], 
+    [sysarticles].[del_cmd] AS [del_cmd], 
+    [sysarticles].[description] AS [description], 
+    [sysarticles].[dest_table] AS [dest_table], 
+    [sysarticles].[filter] AS [filter], 
+    [sysarticles].[filter_clause] AS [filter_clause], 
+    [sysarticles].[ins_cmd] AS [ins_cmd], 
+    [sysarticles].[name] AS [name], 
+    [sysarticles].[objid] AS [objid], 
+    [sysarticles].[pubid] AS [pubid], 
+    [sysarticles].[pre_creation_cmd] AS [pre_creation_cmd], 
+    [sysarticles].[status] AS [status], 
+    [sysarticles].[sync_objid] AS [sync_objid], 
+    [sysarticles].[type] AS [type], 
+    [sysarticles].[upd_cmd] AS [upd_cmd], 
+    [sysarticles].[schema_option] AS [schema_option], 
+    [sysarticles].[dest_owner] AS [dest_owner], 
+    [sysarticles].[ins_scripting_proc] AS [ins_scripting_proc], 
+    [sysarticles].[del_scripting_proc] AS [del_scripting_proc], 
+    [sysarticles].[upd_scripting_proc] AS [upd_scripting_proc], 
+    [sysarticles].[custom_script] AS [custom_script], 
+    [sysarticles].[fire_triggers_on_snapshot] AS [fire_triggers_on_snapshot]
+    FROM [dbo].[sysarticles] AS [sysarticles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysarticleupdates" EntityType="Self.sysarticleupdates" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysarticleupdates].[artid] AS [artid], 
+    [sysarticleupdates].[pubid] AS [pubid], 
+    [sysarticleupdates].[sync_ins_proc] AS [sync_ins_proc], 
+    [sysarticleupdates].[sync_upd_proc] AS [sync_upd_proc], 
+    [sysarticleupdates].[sync_del_proc] AS [sync_del_proc], 
+    [sysarticleupdates].[autogen] AS [autogen], 
+    [sysarticleupdates].[sync_upd_trig] AS [sync_upd_trig], 
+    [sysarticleupdates].[conflict_tableid] AS [conflict_tableid], 
+    [sysarticleupdates].[ins_conflict_proc] AS [ins_conflict_proc], 
+    [sysarticleupdates].[identity_support] AS [identity_support]
+    FROM [dbo].[sysarticleupdates] AS [sysarticleupdates]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syspublications" EntityType="Self.syspublications" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syspublications].[description] AS [description], 
+    [syspublications].[name] AS [name], 
+    [syspublications].[pubid] AS [pubid], 
+    [syspublications].[repl_freq] AS [repl_freq], 
+    [syspublications].[status] AS [status], 
+    [syspublications].[sync_method] AS [sync_method], 
+    [syspublications].[snapshot_jobid] AS [snapshot_jobid], 
+    [syspublications].[independent_agent] AS [independent_agent], 
+    [syspublications].[immediate_sync] AS [immediate_sync], 
+    [syspublications].[enabled_for_internet] AS [enabled_for_internet], 
+    [syspublications].[allow_push] AS [allow_push], 
+    [syspublications].[allow_pull] AS [allow_pull], 
+    [syspublications].[allow_anonymous] AS [allow_anonymous], 
+    [syspublications].[immediate_sync_ready] AS [immediate_sync_ready], 
+    [syspublications].[allow_sync_tran] AS [allow_sync_tran], 
+    [syspublications].[autogen_sync_procs] AS [autogen_sync_procs], 
+    [syspublications].[retention] AS [retention], 
+    [syspublications].[allow_queued_tran] AS [allow_queued_tran], 
+    [syspublications].[snapshot_in_defaultfolder] AS [snapshot_in_defaultfolder], 
+    [syspublications].[alt_snapshot_folder] AS [alt_snapshot_folder], 
+    [syspublications].[pre_snapshot_script] AS [pre_snapshot_script], 
+    [syspublications].[post_snapshot_script] AS [post_snapshot_script], 
+    [syspublications].[compress_snapshot] AS [compress_snapshot], 
+    [syspublications].[ftp_address] AS [ftp_address], 
+    [syspublications].[ftp_port] AS [ftp_port], 
+    [syspublications].[ftp_subdirectory] AS [ftp_subdirectory], 
+    [syspublications].[ftp_login] AS [ftp_login], 
+    [syspublications].[ftp_password] AS [ftp_password], 
+    [syspublications].[allow_dts] AS [allow_dts], 
+    [syspublications].[allow_subscription_copy] AS [allow_subscription_copy], 
+    [syspublications].[centralized_conflicts] AS [centralized_conflicts], 
+    [syspublications].[conflict_retention] AS [conflict_retention], 
+    [syspublications].[conflict_policy] AS [conflict_policy], 
+    [syspublications].[queue_type] AS [queue_type], 
+    [syspublications].[ad_guidname] AS [ad_guidname], 
+    [syspublications].[backward_comp_level] AS [backward_comp_level], 
+    [syspublications].[allow_initialize_from_backup] AS [allow_initialize_from_backup], 
+    [syspublications].[min_autonosync_lsn] AS [min_autonosync_lsn], 
+    [syspublications].[replicate_ddl] AS [replicate_ddl], 
+    [syspublications].[options] AS [options], 
+    [syspublications].[originator_id] AS [originator_id]
+    FROM [dbo].[syspublications] AS [syspublications]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysschemaarticles" EntityType="Self.sysschemaarticles" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysschemaarticles].[artid] AS [artid], 
+    [sysschemaarticles].[creation_script] AS [creation_script], 
+    [sysschemaarticles].[description] AS [description], 
+    [sysschemaarticles].[dest_object] AS [dest_object], 
+    [sysschemaarticles].[name] AS [name], 
+    [sysschemaarticles].[objid] AS [objid], 
+    [sysschemaarticles].[pubid] AS [pubid], 
+    [sysschemaarticles].[pre_creation_cmd] AS [pre_creation_cmd], 
+    [sysschemaarticles].[status] AS [status], 
+    [sysschemaarticles].[type] AS [type], 
+    [sysschemaarticles].[schema_option] AS [schema_option], 
+    [sysschemaarticles].[dest_owner] AS [dest_owner]
+    FROM [dbo].[sysschemaarticles] AS [sysschemaarticles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syssubscriptions" EntityType="Self.syssubscriptions" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syssubscriptions].[artid] AS [artid], 
+    [syssubscriptions].[srvid] AS [srvid], 
+    [syssubscriptions].[dest_db] AS [dest_db], 
+    [syssubscriptions].[status] AS [status], 
+    [syssubscriptions].[sync_type] AS [sync_type], 
+    [syssubscriptions].[login_name] AS [login_name], 
+    [syssubscriptions].[subscription_type] AS [subscription_type], 
+    [syssubscriptions].[distribution_jobid] AS [distribution_jobid], 
+    [syssubscriptions].[timestamp] AS [timestamp], 
+    [syssubscriptions].[update_mode] AS [update_mode], 
+    [syssubscriptions].[loopback_detection] AS [loopback_detection], 
+    [syssubscriptions].[queued_reinit] AS [queued_reinit], 
+    [syssubscriptions].[nosync_type] AS [nosync_type], 
+    [syssubscriptions].[srvname] AS [srvname]
+    FROM [dbo].[syssubscriptions] AS [syssubscriptions]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="systranschemas" EntityType="Self.systranschemas" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [systranschemas].[tabid] AS [tabid], 
+    [systranschemas].[startlsn] AS [startlsn], 
+    [systranschemas].[endlsn] AS [endlsn], 
+    [systranschemas].[typeid] AS [typeid]
+    FROM [dbo].[systranschemas] AS [systranschemas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3035444131374545" EntityType="Self.syncobj_0x3035444131374545" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3035444131374545].[Id] AS [Id], 
+    [syncobj_0x3035444131374545].[Login] AS [Login], 
+    [syncobj_0x3035444131374545].[Password] AS [Password]
+    FROM [dbo].[syncobj_0x3035444131374545] AS [syncobj_0x3035444131374545]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3038394244463041" EntityType="Self.syncobj_0x3038394244463041" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3038394244463041].[Id] AS [Id], 
+    [syncobj_0x3038394244463041].[Building] AS [Building], 
+    [syncobj_0x3038394244463041].[Name] AS [Name]
+    FROM [dbo].[syncobj_0x3038394244463041] AS [syncobj_0x3038394244463041]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3045423137443445" EntityType="Self.syncobj_0x3045423137443445" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3045423137443445].[Id] AS [Id], 
+    [syncobj_0x3045423137443445].[Name] AS [Name]
+    FROM [dbo].[syncobj_0x3045423137443445] AS [syncobj_0x3045423137443445]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3138324637443239" EntityType="Self.syncobj_0x3138324637443239" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3138324637443239].[Id] AS [Id], 
+    [syncobj_0x3138324637443239].[Name] AS [Name], 
+    [syncobj_0x3138324637443239].[Surname] AS [Surname], 
+    [syncobj_0x3138324637443239].[Age] AS [Age], 
+    [syncobj_0x3138324637443239].[Email] AS [Email]
+    FROM [dbo].[syncobj_0x3138324637443239] AS [syncobj_0x3138324637443239]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3141323845433736" EntityType="Self.syncobj_0x3141323845433736" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3141323845433736].[Id] AS [Id], 
+    [syncobj_0x3141323845433736].[TeacherId] AS [TeacherId]
+    FROM [dbo].[syncobj_0x3141323845433736] AS [syncobj_0x3141323845433736]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3141454244323645" EntityType="Self.syncobj_0x3141454244323645" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3141454244323645].[Id] AS [Id], 
+    [syncobj_0x3141454244323645].[Name] AS [Name], 
+    [syncobj_0x3141454244323645].[Year] AS [Year], 
+    [syncobj_0x3141454244323645].[DepartmentId] AS [DepartmentId]
+    FROM [dbo].[syncobj_0x3141454244323645] AS [syncobj_0x3141454244323645]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3232383545423244" EntityType="Self.syncobj_0x3232383545423244" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3232383545423244].[Id] AS [Id], 
+    [syncobj_0x3232383545423244].[TeacherId] AS [TeacherId]
+    FROM [dbo].[syncobj_0x3232383545423244] AS [syncobj_0x3232383545423244]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3244334339463136" EntityType="Self.syncobj_0x3244334339463136" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3244334339463136].[Id] AS [Id], 
+    [syncobj_0x3244334339463136].[SubjectId] AS [SubjectId], 
+    [syncobj_0x3244334339463136].[TeacherId] AS [TeacherId]
+    FROM [dbo].[syncobj_0x3244334339463136] AS [syncobj_0x3244334339463136]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3346333241374434" EntityType="Self.syncobj_0x3346333241374434" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3346333241374434].[Id] AS [Id], 
+    [syncobj_0x3346333241374434].[CuratorId] AS [CuratorId], 
+    [syncobj_0x3346333241374434].[GroupId] AS [GroupId]
+    FROM [dbo].[syncobj_0x3346333241374434] AS [syncobj_0x3346333241374434]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3638394345374546" EntityType="Self.syncobj_0x3638394345374546" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3638394345374546].[Id] AS [Id], 
+    [syncobj_0x3638394345374546].[TeacherId] AS [TeacherId]
+    FROM [dbo].[syncobj_0x3638394345374546] AS [syncobj_0x3638394345374546]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x3930444345393738" EntityType="Self.syncobj_0x3930444345393738" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x3930444345393738].[Id] AS [Id], 
+    [syncobj_0x3930444345393738].[GroupId] AS [GroupId], 
+    [syncobj_0x3930444345393738].[LectureId] AS [LectureId]
+    FROM [dbo].[syncobj_0x3930444345393738] AS [syncobj_0x3930444345393738]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4144384533353531" EntityType="Self.syncobj_0x4144384533353531" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4144384533353531].[name] AS [name], 
+    [syncobj_0x4144384533353531].[principal_id] AS [principal_id], 
+    [syncobj_0x4144384533353531].[diagram_id] AS [diagram_id], 
+    [syncobj_0x4144384533353531].[version] AS [version], 
+    [syncobj_0x4144384533353531].[definition] AS [definition]
+    FROM [dbo].[syncobj_0x4144384533353531] AS [syncobj_0x4144384533353531]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4145464634383043" EntityType="Self.syncobj_0x4145464634383043" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4145464634383043].[Id] AS [Id], 
+    [syncobj_0x4145464634383043].[Building] AS [Building], 
+    [syncobj_0x4145464634383043].[Name] AS [Name], 
+    [syncobj_0x4145464634383043].[FacultyId] AS [FacultyId], 
+    [syncobj_0x4145464634383043].[HeadId] AS [HeadId]
+    FROM [dbo].[syncobj_0x4145464634383043] AS [syncobj_0x4145464634383043]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4234303944444541" EntityType="Self.syncobj_0x4234303944444541" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4234303944444541].[Id] AS [Id], 
+    [syncobj_0x4234303944444541].[Building] AS [Building], 
+    [syncobj_0x4234303944444541].[Name] AS [Name], 
+    [syncobj_0x4234303944444541].[DeanId] AS [DeanId]
+    FROM [dbo].[syncobj_0x4234303944444541] AS [syncobj_0x4234303944444541]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4244443833453936" EntityType="Self.syncobj_0x4244443833453936" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4244443833453936].[Id] AS [Id], 
+    [syncobj_0x4244443833453936].[Class] AS [Class], 
+    [syncobj_0x4244443833453936].[DayOfWeek] AS [DayOfWeek], 
+    [syncobj_0x4244443833453936].[Week] AS [Week], 
+    [syncobj_0x4244443833453936].[LectureId] AS [LectureId], 
+    [syncobj_0x4244443833453936].[LectureRoomId] AS [LectureRoomId]
+    FROM [dbo].[syncobj_0x4244443833453936] AS [syncobj_0x4244443833453936]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4335364237313041" EntityType="Self.syncobj_0x4335364237313041" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4335364237313041].[Id] AS [Id], 
+    [syncobj_0x4335364237313041].[Name] AS [Name], 
+    [syncobj_0x4335364237313041].[Surname] AS [Surname]
+    FROM [dbo].[syncobj_0x4335364237313041] AS [syncobj_0x4335364237313041]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4634313333333132" EntityType="Self.syncobj_0x4634313333333132" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4634313333333132].[Id] AS [Id], 
+    [syncobj_0x4634313333333132].[StaffId] AS [StaffId]
+    FROM [dbo].[syncobj_0x4634313333333132] AS [syncobj_0x4634313333333132]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="syncobj_0x4635443342323534" EntityType="Self.syncobj_0x4635443342323534" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [syncobj_0x4635443342323534].[Id] AS [Id], 
+    [syncobj_0x4635443342323534].[TeacherId] AS [TeacherId]
+    FROM [dbo].[syncobj_0x4635443342323534] AS [syncobj_0x4635443342323534]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysextendedarticlesview" EntityType="Self.sysextendedarticlesview" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysextendedarticlesview].[artid] AS [artid], 
+    [sysextendedarticlesview].[creation_script] AS [creation_script], 
+    [sysextendedarticlesview].[del_cmd] AS [del_cmd], 
+    [sysextendedarticlesview].[description] AS [description], 
+    [sysextendedarticlesview].[dest_table] AS [dest_table], 
+    [sysextendedarticlesview].[filter] AS [filter], 
+    [sysextendedarticlesview].[filter_clause] AS [filter_clause], 
+    [sysextendedarticlesview].[ins_cmd] AS [ins_cmd], 
+    [sysextendedarticlesview].[name] AS [name], 
+    [sysextendedarticlesview].[objid] AS [objid], 
+    [sysextendedarticlesview].[pubid] AS [pubid], 
+    [sysextendedarticlesview].[pre_creation_cmd] AS [pre_creation_cmd], 
+    [sysextendedarticlesview].[status] AS [status], 
+    [sysextendedarticlesview].[sync_objid] AS [sync_objid], 
+    [sysextendedarticlesview].[type] AS [type], 
+    [sysextendedarticlesview].[upd_cmd] AS [upd_cmd], 
+    [sysextendedarticlesview].[schema_option] AS [schema_option], 
+    [sysextendedarticlesview].[dest_owner] AS [dest_owner], 
+    [sysextendedarticlesview].[ins_scripting_proc] AS [ins_scripting_proc], 
+    [sysextendedarticlesview].[del_scripting_proc] AS [del_scripting_proc], 
+    [sysextendedarticlesview].[upd_scripting_proc] AS [upd_scripting_proc], 
+    [sysextendedarticlesview].[custom_script] AS [custom_script], 
+    [sysextendedarticlesview].[fire_triggers_on_snapshot] AS [fire_triggers_on_snapshot]
+    FROM [dbo].[sysextendedarticlesview] AS [sysextendedarticlesview]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Assistant__Teach__6477ECF3" Association="Self.FK__Assistant__Teach__6477ECF3">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Assistants" EntitySet="Assistants" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Curators__Teache__656C112C" Association="Self.FK__Curators__Teache__656C112C">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Curators" EntitySet="Curators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Deans__TeacherId__66603565" Association="Self.FK__Deans__TeacherId__66603565">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Deans" EntitySet="Deans" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Facul__6754599E" Association="Self.FK__Departmen__Facul__6754599E">
+            <End Role="Faculties" EntitySet="Faculties" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__HeadI__68487DD7" Association="Self.FK__Departmen__HeadI__68487DD7">
+            <End Role="Heads" EntitySet="Heads" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Faculties__DeanI__693CA210" Association="Self.FK__Faculties__DeanI__693CA210">
+            <End Role="Deans" EntitySet="Deans" />
+            <End Role="Faculties" EntitySet="Faculties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Groups__Departme__6A30C649" Association="Self.FK__Groups__Departme__6A30C649">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Groups" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsCur__Curat__6B24EA82" Association="Self.FK__GroupsCur__Curat__6B24EA82">
+            <End Role="Curators" EntitySet="Curators" />
+            <End Role="GroupsCurators" EntitySet="GroupsCurators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsCur__Group__6C190EBB" Association="Self.FK__GroupsCur__Group__6C190EBB">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="GroupsCurators" EntitySet="GroupsCurators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsLec__Group__6D0D32F4" Association="Self.FK__GroupsLec__Group__6D0D32F4">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="GroupsLectures" EntitySet="GroupsLectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsLec__Lectu__6E01572D" Association="Self.FK__GroupsLec__Lectu__6E01572D">
+            <End Role="Lectures" EntitySet="Lectures" />
+            <End Role="GroupsLectures" EntitySet="GroupsLectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Heads__TeacherId__6EF57B66" Association="Self.FK__Heads__TeacherId__6EF57B66">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Heads" EntitySet="Heads" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Lectures__Subjec__6FE99F9F" Association="Self.FK__Lectures__Subjec__6FE99F9F">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Lectures" EntitySet="Lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Lectures__Teache__70DDC3D8" Association="Self.FK__Lectures__Teache__70DDC3D8">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Lectures" EntitySet="Lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedules__Lectu__71D1E811" Association="Self.FK__Schedules__Lectu__71D1E811">
+            <End Role="Lectures" EntitySet="Lectures" />
+            <End Role="Schedules" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedules__Lectu__72C60C4A" Association="Self.FK__Schedules__Lectu__72C60C4A">
+            <End Role="LectureRooms" EntitySet="LectureRooms" />
+            <End Role="Schedules" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tutors__StaffId__33D4B598" Association="Self.FK__Tutors__StaffId__33D4B598">
+            <End Role="Staff" EntitySet="Staff" />
+            <End Role="Tutors" EntitySet="Tutors" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AcademyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Assistant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Assistant__Teach__6477ECF3" FromRole="Assistants" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="Curator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Curators__Teache__656C112C" FromRole="Curators" ToRole="Teachers" />
+          <NavigationProperty Name="GroupsCurators" Relationship="Self.FK__GroupsCur__Curat__6B24EA82" FromRole="Curators" ToRole="GroupsCurators" />
+        </EntityType>
+        <EntityType Name="Dean">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Deans__TeacherId__66603565" FromRole="Deans" ToRole="Teachers" />
+          <NavigationProperty Name="Faculties" Relationship="Self.FK__Faculties__DeanI__693CA210" FromRole="Deans" ToRole="Faculties" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Building" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FacultyId" Type="Int32" Nullable="false" />
+          <Property Name="HeadId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Faculty" Relationship="Self.FK__Departmen__Facul__6754599E" FromRole="Departments" ToRole="Faculties" />
+          <NavigationProperty Name="Head" Relationship="Self.FK__Departmen__HeadI__68487DD7" FromRole="Departments" ToRole="Heads" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK__Groups__Departme__6A30C649" FromRole="Departments" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Faculty">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Building" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DeanId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Dean" Relationship="Self.FK__Faculties__DeanI__693CA210" FromRole="Faculties" ToRole="Deans" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK__Departmen__Facul__6754599E" FromRole="Faculties" ToRole="Departments" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Department" Relationship="Self.FK__Groups__Departme__6A30C649" FromRole="Groups" ToRole="Departments" />
+          <NavigationProperty Name="GroupsCurators" Relationship="Self.FK__GroupsCur__Group__6C190EBB" FromRole="Groups" ToRole="GroupsCurators" />
+          <NavigationProperty Name="GroupsLectures" Relationship="Self.FK__GroupsLec__Group__6D0D32F4" FromRole="Groups" ToRole="GroupsLectures" />
+        </EntityType>
+        <EntityType Name="GroupsCurator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CuratorId" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Curator" Relationship="Self.FK__GroupsCur__Curat__6B24EA82" FromRole="GroupsCurators" ToRole="Curators" />
+          <NavigationProperty Name="Group" Relationship="Self.FK__GroupsCur__Group__6C190EBB" FromRole="GroupsCurators" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="GroupsLecture">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="LectureId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="Self.FK__GroupsLec__Group__6D0D32F4" FromRole="GroupsLectures" ToRole="Groups" />
+          <NavigationProperty Name="Lecture" Relationship="Self.FK__GroupsLec__Lectu__6E01572D" FromRole="GroupsLectures" ToRole="Lectures" />
+        </EntityType>
+        <EntityType Name="Head">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK__Departmen__HeadI__68487DD7" FromRole="Heads" ToRole="Departments" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Heads__TeacherId__6EF57B66" FromRole="Heads" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="LectureRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Building" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__Lectu__72C60C4A" FromRole="LectureRooms" ToRole="Schedules" />
+        </EntityType>
+        <EntityType Name="Lecture">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectId" Type="Int32" Nullable="false" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="GroupsLectures" Relationship="Self.FK__GroupsLec__Lectu__6E01572D" FromRole="Lectures" ToRole="GroupsLectures" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__Lectures__Subjec__6FE99F9F" FromRole="Lectures" ToRole="Subjects" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Lectures__Teache__70DDC3D8" FromRole="Lectures" ToRole="Teachers" />
+          <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__Lectu__71D1E811" FromRole="Lectures" ToRole="Schedules" />
+        </EntityType>
+        <EntityType Name="MSpeer_conflictdetectionconfigrequest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sent_date" Type="DateTime" Nullable="false" />
+          <Property Name="timeout" Type="Int32" Nullable="false" />
+          <Property Name="modified_date" Type="DateTime" Nullable="false" />
+          <Property Name="progress_phase" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phase_timed_out" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MSpeer_lsns">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="last_updated" Type="DateTime" />
+          <Property Name="originator" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_publication_id" Type="Int32" />
+          <Property Name="originator_db_version" Type="Int32" />
+          <Property Name="originator_lsn" Type="Binary" MaxLength="16" FixedLength="false" />
+          <Property Name="originator_version" Type="Int32" />
+          <Property Name="originator_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Class" Type="Int32" Nullable="false" />
+          <Property Name="DayOfWeek" Type="Int32" Nullable="false" />
+          <Property Name="Week" Type="Int32" Nullable="false" />
+          <Property Name="LectureId" Type="Int32" Nullable="false" />
+          <Property Name="LectureRoomId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LectureRoom" Relationship="Self.FK__Schedules__Lectu__72C60C4A" FromRole="Schedules" ToRole="LectureRooms" />
+          <NavigationProperty Name="Lecture" Relationship="Self.FK__Schedules__Lectu__71D1E811" FromRole="Schedules" ToRole="Lectures" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tutors" Relationship="Self.FK__Tutors__StaffId__33D4B598" FromRole="Staff" ToRole="Tutors" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Lectures" Relationship="Self.FK__Lectures__Subjec__6FE99F9F" FromRole="Subjects" ToRole="Lectures" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="sysreplserver">
+          <Key>
+            <PropertyRef Name="srvname" />
+          </Key>
+          <Property Name="srvname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="srvid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Assistants" Relationship="Self.FK__Assistant__Teach__6477ECF3" FromRole="Teachers" ToRole="Assistants" />
+          <NavigationProperty Name="Curators" Relationship="Self.FK__Curators__Teache__656C112C" FromRole="Teachers" ToRole="Curators" />
+          <NavigationProperty Name="Deans" Relationship="Self.FK__Deans__TeacherId__66603565" FromRole="Teachers" ToRole="Deans" />
+          <NavigationProperty Name="Heads" Relationship="Self.FK__Heads__TeacherId__6EF57B66" FromRole="Teachers" ToRole="Heads" />
+          <NavigationProperty Name="Lectures" Relationship="Self.FK__Lectures__Teache__70DDC3D8" FromRole="Teachers" ToRole="Lectures" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Tutor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StaffId" Type="Int32" />
+          <NavigationProperty Name="Staff" Relationship="Self.FK__Tutors__StaffId__33D4B598" FromRole="Tutors" ToRole="Staff" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="Binary" MaxLength="70" FixedLength="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MSpeer_conflictdetectionconfigresponse">
+          <Key>
+            <PropertyRef Name="request_id" />
+            <PropertyRef Name="peer_node" />
+            <PropertyRef Name="peer_db" />
+            <PropertyRef Name="progress_phase" />
+          </Key>
+          <Property Name="request_id" Type="Int32" Nullable="false" />
+          <Property Name="peer_node" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="peer_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="peer_version" Type="Int32" />
+          <Property Name="peer_db_version" Type="Int32" />
+          <Property Name="is_peer" Type="Boolean" />
+          <Property Name="conflictdetection_enabled" Type="Boolean" />
+          <Property Name="originator_id" Type="Int32" />
+          <Property Name="peer_conflict_retention" Type="Int32" />
+          <Property Name="peer_continue_onconflict" Type="Boolean" />
+          <Property Name="peer_subscriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="progress_phase" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="modified_date" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="MSpeer_originatorid_history">
+          <Key>
+            <PropertyRef Name="originator_publication" />
+            <PropertyRef Name="originator_id" />
+            <PropertyRef Name="originator_node" />
+            <PropertyRef Name="originator_db" />
+            <PropertyRef Name="originator_db_version" />
+            <PropertyRef Name="originator_version" />
+            <PropertyRef Name="inserted_date" />
+          </Key>
+          <Property Name="originator_publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_id" Type="Int32" Nullable="false" />
+          <Property Name="originator_node" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_db_version" Type="Int32" Nullable="false" />
+          <Property Name="originator_version" Type="Int32" Nullable="false" />
+          <Property Name="inserted_date" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MSpeer_request">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="publication" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sent_date" Type="DateTime" />
+          <Property Name="description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MSpeer_response">
+          <Key>
+            <PropertyRef Name="peer" />
+            <PropertyRef Name="peer_db" />
+          </Key>
+          <Property Name="request_id" Type="Int32" />
+          <Property Name="peer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="peer_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="received_date" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="MSpeer_topologyrequest">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="publication" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sent_date" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="MSpeer_topologyresponse">
+          <Key>
+            <PropertyRef Name="peer" />
+            <PropertyRef Name="peer_db" />
+          </Key>
+          <Property Name="request_id" Type="Int32" />
+          <Property Name="peer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="peer_version" Type="Int32" />
+          <Property Name="peer_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="originator_id" Type="Int32" />
+          <Property Name="peer_conflict_retention" Type="Int32" />
+          <Property Name="received_date" Type="DateTime" />
+          <Property Name="connection_info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MSpub_identity_range">
+          <Key>
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="range" />
+            <PropertyRef Name="pub_range" />
+            <PropertyRef Name="current_pub_range" />
+            <PropertyRef Name="threshold" />
+          </Key>
+          <Property Name="objid" Type="Int32" Nullable="false" />
+          <Property Name="range" Type="Int64" Nullable="false" />
+          <Property Name="pub_range" Type="Int64" Nullable="false" />
+          <Property Name="current_pub_range" Type="Int64" Nullable="false" />
+          <Property Name="threshold" Type="Int32" Nullable="false" />
+          <Property Name="last_seed" Type="Int64" />
+        </EntityType>
+        <EntityType Name="sysarticlecolumn">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="colid" />
+          </Key>
+          <Property Name="artid" Type="Int32" Nullable="false" />
+          <Property Name="colid" Type="Int32" Nullable="false" />
+          <Property Name="is_udt" Type="Boolean" />
+          <Property Name="is_xml" Type="Boolean" />
+          <Property Name="is_max" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="sysarticle">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="dest_table" />
+            <PropertyRef Name="filter" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="pre_creation_cmd" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="sync_objid" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="fire_triggers_on_snapshot" />
+          </Key>
+          <Property Name="artid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="creation_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="del_cmd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dest_table" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="filter" Type="Int32" Nullable="false" />
+          <Property Name="filter_clause" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ins_cmd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="objid" Type="Int32" Nullable="false" />
+          <Property Name="pubid" Type="Int32" Nullable="false" />
+          <Property Name="pre_creation_cmd" Type="Byte" Nullable="false" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          <Property Name="sync_objid" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="Byte" Nullable="false" />
+          <Property Name="upd_cmd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="schema_option" Type="Binary" MaxLength="8" FixedLength="true" />
+          <Property Name="dest_owner" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ins_scripting_proc" Type="Int32" />
+          <Property Name="del_scripting_proc" Type="Int32" />
+          <Property Name="upd_scripting_proc" Type="Int32" />
+          <Property Name="custom_script" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Name="fire_triggers_on_snapshot" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysarticleupdate">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="sync_ins_proc" />
+            <PropertyRef Name="sync_upd_proc" />
+            <PropertyRef Name="sync_del_proc" />
+            <PropertyRef Name="autogen" />
+            <PropertyRef Name="sync_upd_trig" />
+            <PropertyRef Name="identity_support" />
+          </Key>
+          <Property Name="artid" Type="Int32" Nullable="false" />
+          <Property Name="pubid" Type="Int32" Nullable="false" />
+          <Property Name="sync_ins_proc" Type="Int32" Nullable="false" />
+          <Property Name="sync_upd_proc" Type="Int32" Nullable="false" />
+          <Property Name="sync_del_proc" Type="Int32" Nullable="false" />
+          <Property Name="autogen" Type="Boolean" Nullable="false" />
+          <Property Name="sync_upd_trig" Type="Int32" Nullable="false" />
+          <Property Name="conflict_tableid" Type="Int32" />
+          <Property Name="ins_conflict_proc" Type="Int32" />
+          <Property Name="identity_support" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syspublication">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="repl_freq" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="sync_method" />
+            <PropertyRef Name="independent_agent" />
+            <PropertyRef Name="immediate_sync" />
+            <PropertyRef Name="enabled_for_internet" />
+            <PropertyRef Name="allow_push" />
+            <PropertyRef Name="allow_pull" />
+            <PropertyRef Name="allow_anonymous" />
+            <PropertyRef Name="immediate_sync_ready" />
+            <PropertyRef Name="allow_sync_tran" />
+            <PropertyRef Name="autogen_sync_procs" />
+            <PropertyRef Name="allow_queued_tran" />
+            <PropertyRef Name="snapshot_in_defaultfolder" />
+            <PropertyRef Name="compress_snapshot" />
+            <PropertyRef Name="ftp_port" />
+            <PropertyRef Name="allow_dts" />
+            <PropertyRef Name="allow_subscription_copy" />
+            <PropertyRef Name="backward_comp_level" />
+            <PropertyRef Name="allow_initialize_from_backup" />
+            <PropertyRef Name="options" />
+          </Key>
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pubid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="repl_freq" Type="Byte" Nullable="false" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          <Property Name="sync_method" Type="Byte" Nullable="false" />
+          <Property Name="snapshot_jobid" Type="Binary" MaxLength="16" FixedLength="true" />
+          <Property Name="independent_agent" Type="Boolean" Nullable="false" />
+          <Property Name="immediate_sync" Type="Boolean" Nullable="false" />
+          <Property Name="enabled_for_internet" Type="Boolean" Nullable="false" />
+          <Property Name="allow_push" Type="Boolean" Nullable="false" />
+          <Property Name="allow_pull" Type="Boolean" Nullable="false" />
+          <Property Name="allow_anonymous" Type="Boolean" Nullable="false" />
+          <Property Name="immediate_sync_ready" Type="Boolean" Nullable="false" />
+          <Property Name="allow_sync_tran" Type="Boolean" Nullable="false" />
+          <Property Name="autogen_sync_procs" Type="Boolean" Nullable="false" />
+          <Property Name="retention" Type="Int32" />
+          <Property Name="allow_queued_tran" Type="Boolean" Nullable="false" />
+          <Property Name="snapshot_in_defaultfolder" Type="Boolean" Nullable="false" />
+          <Property Name="alt_snapshot_folder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="pre_snapshot_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="post_snapshot_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="compress_snapshot" Type="Boolean" Nullable="false" />
+          <Property Name="ftp_address" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ftp_port" Type="Int32" Nullable="false" />
+          <Property Name="ftp_subdirectory" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ftp_login" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ftp_password" Type="String" MaxLength="524" FixedLength="false" Unicode="true" />
+          <Property Name="allow_dts" Type="Boolean" Nullable="false" />
+          <Property Name="allow_subscription_copy" Type="Boolean" Nullable="false" />
+          <Property Name="centralized_conflicts" Type="Boolean" />
+          <Property Name="conflict_retention" Type="Int32" />
+          <Property Name="conflict_policy" Type="Int32" />
+          <Property Name="queue_type" Type="Int32" />
+          <Property Name="ad_guidname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="backward_comp_level" Type="Int32" Nullable="false" />
+          <Property Name="allow_initialize_from_backup" Type="Boolean" Nullable="false" />
+          <Property Name="min_autonosync_lsn" Type="Binary" MaxLength="10" FixedLength="true" />
+          <Property Name="replicate_ddl" Type="Int32" />
+          <Property Name="options" Type="Int32" Nullable="false" />
+          <Property Name="originator_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysschemaarticle">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="dest_object" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="pre_creation_cmd" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="type" />
+          </Key>
+          <Property Name="artid" Type="Int32" Nullable="false" />
+          <Property Name="creation_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dest_object" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="objid" Type="Int32" Nullable="false" />
+          <Property Name="pubid" Type="Int32" Nullable="false" />
+          <Property Name="pre_creation_cmd" Type="Byte" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="Byte" Nullable="false" />
+          <Property Name="schema_option" Type="Binary" MaxLength="8" FixedLength="true" />
+          <Property Name="dest_owner" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="syssubscription">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="srvid" />
+            <PropertyRef Name="dest_db" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="sync_type" />
+            <PropertyRef Name="login_name" />
+            <PropertyRef Name="subscription_type" />
+            <PropertyRef Name="timestamp" />
+            <PropertyRef Name="update_mode" />
+            <PropertyRef Name="loopback_detection" />
+            <PropertyRef Name="queued_reinit" />
+            <PropertyRef Name="nosync_type" />
+            <PropertyRef Name="srvname" />
+          </Key>
+          <Property Name="artid" Type="Int32" Nullable="false" />
+          <Property Name="srvid" Type="Int16" Nullable="false" />
+          <Property Name="dest_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          <Property Name="sync_type" Type="Byte" Nullable="false" />
+          <Property Name="login_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subscription_type" Type="Int32" Nullable="false" />
+          <Property Name="distribution_jobid" Type="Binary" MaxLength="16" FixedLength="true" />
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="update_mode" Type="Byte" Nullable="false" />
+          <Property Name="loopback_detection" Type="Boolean" Nullable="false" />
+          <Property Name="queued_reinit" Type="Boolean" Nullable="false" />
+          <Property Name="nosync_type" Type="Byte" Nullable="false" />
+          <Property Name="srvname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="systranschema">
+          <Key>
+            <PropertyRef Name="tabid" />
+            <PropertyRef Name="startlsn" />
+            <PropertyRef Name="endlsn" />
+            <PropertyRef Name="typeid" />
+          </Key>
+          <Property Name="tabid" Type="Int32" Nullable="false" />
+          <Property Name="startlsn" Type="Binary" MaxLength="10" FixedLength="true" Nullable="false" />
+          <Property Name="endlsn" Type="Binary" MaxLength="10" FixedLength="true" Nullable="false" />
+          <Property Name="typeid" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3035444131374545">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Login" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="Binary" MaxLength="70" FixedLength="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3038394244463041">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Building" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Building" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3045423137443445">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3138324637443239">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Surname" />
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3141323845433736">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3141454244323645">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3232383545423244">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3244334339463136">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="SubjectId" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectId" Type="Int32" Nullable="false" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3346333241374434">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="CuratorId" />
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CuratorId" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3638394345374546">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x3930444345393738">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="GroupId" />
+            <PropertyRef Name="LectureId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="LectureId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4144384533353531">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4145464634383043">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Building" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="FacultyId" />
+            <PropertyRef Name="HeadId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Building" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FacultyId" Type="Int32" Nullable="false" />
+          <Property Name="HeadId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4234303944444541">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Building" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="DeanId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Building" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DeanId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4244443833453936">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Class" />
+            <PropertyRef Name="DayOfWeek" />
+            <PropertyRef Name="Week" />
+            <PropertyRef Name="LectureId" />
+            <PropertyRef Name="LectureRoomId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Class" Type="Int32" Nullable="false" />
+          <Property Name="DayOfWeek" Type="Int32" Nullable="false" />
+          <Property Name="Week" Type="Int32" Nullable="false" />
+          <Property Name="LectureId" Type="Int32" Nullable="false" />
+          <Property Name="LectureRoomId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4335364237313041">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Surname" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4634313333333132">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StaffId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="syncobj_0x4635443342323534">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysextendedarticlesview">
+          <Key>
+            <PropertyRef Name="artid" />
+            <PropertyRef Name="dest_table" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="objid" />
+            <PropertyRef Name="pubid" />
+            <PropertyRef Name="pre_creation_cmd" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="fire_triggers_on_snapshot" />
+          </Key>
+          <Property Name="artid" Type="Int32" Nullable="false" />
+          <Property Name="creation_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="del_cmd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dest_table" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="filter" Type="Int32" />
+          <Property Name="filter_clause" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ins_cmd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="objid" Type="Int32" Nullable="false" />
+          <Property Name="pubid" Type="Int32" Nullable="false" />
+          <Property Name="pre_creation_cmd" Type="Byte" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="sync_objid" Type="Int32" />
+          <Property Name="type" Type="Byte" Nullable="false" />
+          <Property Name="upd_cmd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="schema_option" Type="Binary" MaxLength="8" FixedLength="true" />
+          <Property Name="dest_owner" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ins_scripting_proc" Type="Int32" />
+          <Property Name="del_scripting_proc" Type="Int32" />
+          <Property Name="upd_scripting_proc" Type="Int32" />
+          <Property Name="custom_script" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Name="fire_triggers_on_snapshot" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Assistant__Teach__6477ECF3">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Assistants" Type="Self.Assistant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Assistants">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Curators__Teache__656C112C">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Curators" Type="Self.Curator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Curators">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsCur__Curat__6B24EA82">
+          <End Role="Curators" Type="Self.Curator" Multiplicity="1" />
+          <End Role="GroupsCurators" Type="Self.GroupsCurator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsCurators">
+              <PropertyRef Name="CuratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Deans__TeacherId__66603565">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Deans" Type="Self.Dean" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Deans">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Faculties__DeanI__693CA210">
+          <End Role="Deans" Type="Self.Dean" Multiplicity="1" />
+          <End Role="Faculties" Type="Self.Faculty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Deans">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Faculties">
+              <PropertyRef Name="DeanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Facul__6754599E">
+          <End Role="Faculties" Type="Self.Faculty" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Faculties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="FacultyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__HeadI__68487DD7">
+          <End Role="Heads" Type="Self.Head" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Heads">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="HeadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Groups__Departme__6A30C649">
+          <End Role="Departments" Type="Self.Department" Multiplicity="1" />
+          <End Role="Groups" Type="Self.Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Groups">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsCur__Group__6C190EBB">
+          <End Role="Groups" Type="Self.Group" Multiplicity="1" />
+          <End Role="GroupsCurators" Type="Self.GroupsCurator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsCurators">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsLec__Group__6D0D32F4">
+          <End Role="Groups" Type="Self.Group" Multiplicity="1" />
+          <End Role="GroupsLectures" Type="Self.GroupsLecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsLectures">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GroupsLec__Lectu__6E01572D">
+          <End Role="Lectures" Type="Self.Lecture" Multiplicity="1" />
+          <End Role="GroupsLectures" Type="Self.GroupsLecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lectures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupsLectures">
+              <PropertyRef Name="LectureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Heads__TeacherId__6EF57B66">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Heads" Type="Self.Head" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Heads">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedules__Lectu__72C60C4A">
+          <End Role="LectureRooms" Type="Self.LectureRoom" Multiplicity="1" />
+          <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LectureRooms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedules">
+              <PropertyRef Name="LectureRoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Lectures__Subjec__6FE99F9F">
+          <End Role="Subjects" Type="Self.Subject" Multiplicity="1" />
+          <End Role="Lectures" Type="Self.Lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lectures">
+              <PropertyRef Name="SubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Lectures__Teache__70DDC3D8">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Lectures" Type="Self.Lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lectures">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedules__Lectu__71D1E811">
+          <End Role="Lectures" Type="Self.Lecture" Multiplicity="1" />
+          <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lectures">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedules">
+              <PropertyRef Name="LectureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tutors__StaffId__33D4B598">
+          <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+          <End Role="Tutors" Type="Self.Tutor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Staff">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tutors">
+              <PropertyRef Name="StaffId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AcademyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Assistants" EntityType="Self.Assistant" />
+          <EntitySet Name="Curators" EntityType="Self.Curator" />
+          <EntitySet Name="Deans" EntityType="Self.Dean" />
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="Faculties" EntityType="Self.Faculty" />
+          <EntitySet Name="Groups" EntityType="Self.Group" />
+          <EntitySet Name="GroupsCurators" EntityType="Self.GroupsCurator" />
+          <EntitySet Name="GroupsLectures" EntityType="Self.GroupsLecture" />
+          <EntitySet Name="Heads" EntityType="Self.Head" />
+          <EntitySet Name="LectureRooms" EntityType="Self.LectureRoom" />
+          <EntitySet Name="Lectures" EntityType="Self.Lecture" />
+          <EntitySet Name="MSpeer_conflictdetectionconfigrequest" EntityType="Self.MSpeer_conflictdetectionconfigrequest" />
+          <EntitySet Name="MSpeer_lsns" EntityType="Self.MSpeer_lsns" />
+          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
+          <EntitySet Name="Staffs" EntityType="Self.Staff" />
+          <EntitySet Name="Subjects" EntityType="Self.Subject" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="sysreplservers" EntityType="Self.sysreplserver" />
+          <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+          <EntitySet Name="Tests" EntityType="Self.Test" />
+          <EntitySet Name="Tutors" EntityType="Self.Tutor" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="MSpeer_conflictdetectionconfigresponse" EntityType="Self.MSpeer_conflictdetectionconfigresponse" />
+          <EntitySet Name="MSpeer_originatorid_history" EntityType="Self.MSpeer_originatorid_history" />
+          <EntitySet Name="MSpeer_request" EntityType="Self.MSpeer_request" />
+          <EntitySet Name="MSpeer_response" EntityType="Self.MSpeer_response" />
+          <EntitySet Name="MSpeer_topologyrequest" EntityType="Self.MSpeer_topologyrequest" />
+          <EntitySet Name="MSpeer_topologyresponse" EntityType="Self.MSpeer_topologyresponse" />
+          <EntitySet Name="MSpub_identity_range" EntityType="Self.MSpub_identity_range" />
+          <EntitySet Name="sysarticlecolumns" EntityType="Self.sysarticlecolumn" />
+          <EntitySet Name="sysarticles" EntityType="Self.sysarticle" />
+          <EntitySet Name="sysarticleupdates" EntityType="Self.sysarticleupdate" />
+          <EntitySet Name="syspublications" EntityType="Self.syspublication" />
+          <EntitySet Name="sysschemaarticles" EntityType="Self.sysschemaarticle" />
+          <EntitySet Name="syssubscriptions" EntityType="Self.syssubscription" />
+          <EntitySet Name="systranschemas" EntityType="Self.systranschema" />
+          <EntitySet Name="syncobj_0x3035444131374545" EntityType="Self.syncobj_0x3035444131374545" />
+          <EntitySet Name="syncobj_0x3038394244463041" EntityType="Self.syncobj_0x3038394244463041" />
+          <EntitySet Name="syncobj_0x3045423137443445" EntityType="Self.syncobj_0x3045423137443445" />
+          <EntitySet Name="syncobj_0x3138324637443239" EntityType="Self.syncobj_0x3138324637443239" />
+          <EntitySet Name="syncobj_0x3141323845433736" EntityType="Self.syncobj_0x3141323845433736" />
+          <EntitySet Name="syncobj_0x3141454244323645" EntityType="Self.syncobj_0x3141454244323645" />
+          <EntitySet Name="syncobj_0x3232383545423244" EntityType="Self.syncobj_0x3232383545423244" />
+          <EntitySet Name="syncobj_0x3244334339463136" EntityType="Self.syncobj_0x3244334339463136" />
+          <EntitySet Name="syncobj_0x3346333241374434" EntityType="Self.syncobj_0x3346333241374434" />
+          <EntitySet Name="syncobj_0x3638394345374546" EntityType="Self.syncobj_0x3638394345374546" />
+          <EntitySet Name="syncobj_0x3930444345393738" EntityType="Self.syncobj_0x3930444345393738" />
+          <EntitySet Name="syncobj_0x4144384533353531" EntityType="Self.syncobj_0x4144384533353531" />
+          <EntitySet Name="syncobj_0x4145464634383043" EntityType="Self.syncobj_0x4145464634383043" />
+          <EntitySet Name="syncobj_0x4234303944444541" EntityType="Self.syncobj_0x4234303944444541" />
+          <EntitySet Name="syncobj_0x4244443833453936" EntityType="Self.syncobj_0x4244443833453936" />
+          <EntitySet Name="syncobj_0x4335364237313041" EntityType="Self.syncobj_0x4335364237313041" />
+          <EntitySet Name="syncobj_0x4634313333333132" EntityType="Self.syncobj_0x4634313333333132" />
+          <EntitySet Name="syncobj_0x4635443342323534" EntityType="Self.syncobj_0x4635443342323534" />
+          <EntitySet Name="sysextendedarticlesviews" EntityType="Self.sysextendedarticlesview" />
+          <AssociationSet Name="FK__Assistant__Teach__6477ECF3" Association="Self.FK__Assistant__Teach__6477ECF3">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Assistants" EntitySet="Assistants" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Curators__Teache__656C112C" Association="Self.FK__Curators__Teache__656C112C">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Curators" EntitySet="Curators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsCur__Curat__6B24EA82" Association="Self.FK__GroupsCur__Curat__6B24EA82">
+            <End Role="Curators" EntitySet="Curators" />
+            <End Role="GroupsCurators" EntitySet="GroupsCurators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Deans__TeacherId__66603565" Association="Self.FK__Deans__TeacherId__66603565">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Deans" EntitySet="Deans" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Faculties__DeanI__693CA210" Association="Self.FK__Faculties__DeanI__693CA210">
+            <End Role="Deans" EntitySet="Deans" />
+            <End Role="Faculties" EntitySet="Faculties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Facul__6754599E" Association="Self.FK__Departmen__Facul__6754599E">
+            <End Role="Faculties" EntitySet="Faculties" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__HeadI__68487DD7" Association="Self.FK__Departmen__HeadI__68487DD7">
+            <End Role="Heads" EntitySet="Heads" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Groups__Departme__6A30C649" Association="Self.FK__Groups__Departme__6A30C649">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Groups" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsCur__Group__6C190EBB" Association="Self.FK__GroupsCur__Group__6C190EBB">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="GroupsCurators" EntitySet="GroupsCurators" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsLec__Group__6D0D32F4" Association="Self.FK__GroupsLec__Group__6D0D32F4">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="GroupsLectures" EntitySet="GroupsLectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupsLec__Lectu__6E01572D" Association="Self.FK__GroupsLec__Lectu__6E01572D">
+            <End Role="Lectures" EntitySet="Lectures" />
+            <End Role="GroupsLectures" EntitySet="GroupsLectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Heads__TeacherId__6EF57B66" Association="Self.FK__Heads__TeacherId__6EF57B66">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Heads" EntitySet="Heads" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedules__Lectu__72C60C4A" Association="Self.FK__Schedules__Lectu__72C60C4A">
+            <End Role="LectureRooms" EntitySet="LectureRooms" />
+            <End Role="Schedules" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Lectures__Subjec__6FE99F9F" Association="Self.FK__Lectures__Subjec__6FE99F9F">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Lectures" EntitySet="Lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Lectures__Teache__70DDC3D8" Association="Self.FK__Lectures__Teache__70DDC3D8">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="Lectures" EntitySet="Lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedules__Lectu__71D1E811" Association="Self.FK__Schedules__Lectu__71D1E811">
+            <End Role="Lectures" EntitySet="Lectures" />
+            <End Role="Schedules" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tutors__StaffId__33D4B598" Association="Self.FK__Tutors__StaffId__33D4B598">
+            <End Role="Staff" EntitySet="Staffs" />
+            <End Role="Tutors" EntitySet="Tutors" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AcademyModelStoreContainer" CdmEntityContainer="AcademyEntities">
+          <EntitySetMapping Name="Assistants">
+            <EntityTypeMapping TypeName="AcademyModel.Assistant">
+              <MappingFragment StoreEntitySet="Assistants">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Curators">
+            <EntityTypeMapping TypeName="AcademyModel.Curator">
+              <MappingFragment StoreEntitySet="Curators">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deans">
+            <EntityTypeMapping TypeName="AcademyModel.Dean">
+              <MappingFragment StoreEntitySet="Deans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="AcademyModel.Department">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FacultyId" ColumnName="FacultyId" />
+                <ScalarProperty Name="HeadId" ColumnName="HeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Faculties">
+            <EntityTypeMapping TypeName="AcademyModel.Faculty">
+              <MappingFragment StoreEntitySet="Faculties">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DeanId" ColumnName="DeanId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="AcademyModel.Group">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupsCurators">
+            <EntityTypeMapping TypeName="AcademyModel.GroupsCurator">
+              <MappingFragment StoreEntitySet="GroupsCurators">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CuratorId" ColumnName="CuratorId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupsLectures">
+            <EntityTypeMapping TypeName="AcademyModel.GroupsLecture">
+              <MappingFragment StoreEntitySet="GroupsLectures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="LectureId" ColumnName="LectureId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Heads">
+            <EntityTypeMapping TypeName="AcademyModel.Head">
+              <MappingFragment StoreEntitySet="Heads">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LectureRooms">
+            <EntityTypeMapping TypeName="AcademyModel.LectureRoom">
+              <MappingFragment StoreEntitySet="LectureRooms">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lectures">
+            <EntityTypeMapping TypeName="AcademyModel.Lecture">
+              <MappingFragment StoreEntitySet="Lectures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_conflictdetectionconfigrequest">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_conflictdetectionconfigrequest">
+              <MappingFragment StoreEntitySet="MSpeer_conflictdetectionconfigrequest">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="publication" ColumnName="publication" />
+                <ScalarProperty Name="sent_date" ColumnName="sent_date" />
+                <ScalarProperty Name="timeout" ColumnName="timeout" />
+                <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+                <ScalarProperty Name="progress_phase" ColumnName="progress_phase" />
+                <ScalarProperty Name="phase_timed_out" ColumnName="phase_timed_out" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_lsns">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_lsns">
+              <MappingFragment StoreEntitySet="MSpeer_lsns">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+                <ScalarProperty Name="originator" ColumnName="originator" />
+                <ScalarProperty Name="originator_db" ColumnName="originator_db" />
+                <ScalarProperty Name="originator_publication" ColumnName="originator_publication" />
+                <ScalarProperty Name="originator_publication_id" ColumnName="originator_publication_id" />
+                <ScalarProperty Name="originator_db_version" ColumnName="originator_db_version" />
+                <ScalarProperty Name="originator_lsn" ColumnName="originator_lsn" />
+                <ScalarProperty Name="originator_version" ColumnName="originator_version" />
+                <ScalarProperty Name="originator_id" ColumnName="originator_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedules">
+            <EntityTypeMapping TypeName="AcademyModel.Schedule">
+              <MappingFragment StoreEntitySet="Schedules">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="LectureId" ColumnName="LectureId" />
+                <ScalarProperty Name="LectureRoomId" ColumnName="LectureRoomId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffs">
+            <EntityTypeMapping TypeName="AcademyModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="AcademyModel.Subject">
+              <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AcademyModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysreplservers">
+            <EntityTypeMapping TypeName="AcademyModel.sysreplserver">
+              <MappingFragment StoreEntitySet="sysreplservers">
+                <ScalarProperty Name="srvname" ColumnName="srvname" />
+                <ScalarProperty Name="srvid" ColumnName="srvid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teachers">
+            <EntityTypeMapping TypeName="AcademyModel.Teacher">
+              <MappingFragment StoreEntitySet="Teachers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tests">
+            <EntityTypeMapping TypeName="AcademyModel.Test">
+              <MappingFragment StoreEntitySet="Test">
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tutors">
+            <EntityTypeMapping TypeName="AcademyModel.Tutor">
+              <MappingFragment StoreEntitySet="Tutors">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AcademyModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_conflictdetectionconfigresponse">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_conflictdetectionconfigresponse">
+              <MappingFragment StoreEntitySet="MSpeer_conflictdetectionconfigresponse">
+                <ScalarProperty Name="request_id" ColumnName="request_id" />
+                <ScalarProperty Name="peer_node" ColumnName="peer_node" />
+                <ScalarProperty Name="peer_db" ColumnName="peer_db" />
+                <ScalarProperty Name="peer_version" ColumnName="peer_version" />
+                <ScalarProperty Name="peer_db_version" ColumnName="peer_db_version" />
+                <ScalarProperty Name="is_peer" ColumnName="is_peer" />
+                <ScalarProperty Name="conflictdetection_enabled" ColumnName="conflictdetection_enabled" />
+                <ScalarProperty Name="originator_id" ColumnName="originator_id" />
+                <ScalarProperty Name="peer_conflict_retention" ColumnName="peer_conflict_retention" />
+                <ScalarProperty Name="peer_continue_onconflict" ColumnName="peer_continue_onconflict" />
+                <ScalarProperty Name="peer_subscriptions" ColumnName="peer_subscriptions" />
+                <ScalarProperty Name="progress_phase" ColumnName="progress_phase" />
+                <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_originatorid_history">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_originatorid_history">
+              <MappingFragment StoreEntitySet="MSpeer_originatorid_history">
+                <ScalarProperty Name="originator_publication" ColumnName="originator_publication" />
+                <ScalarProperty Name="originator_id" ColumnName="originator_id" />
+                <ScalarProperty Name="originator_node" ColumnName="originator_node" />
+                <ScalarProperty Name="originator_db" ColumnName="originator_db" />
+                <ScalarProperty Name="originator_db_version" ColumnName="originator_db_version" />
+                <ScalarProperty Name="originator_version" ColumnName="originator_version" />
+                <ScalarProperty Name="inserted_date" ColumnName="inserted_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_request">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_request">
+              <MappingFragment StoreEntitySet="MSpeer_request">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="publication" ColumnName="publication" />
+                <ScalarProperty Name="sent_date" ColumnName="sent_date" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_response">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_response">
+              <MappingFragment StoreEntitySet="MSpeer_response">
+                <ScalarProperty Name="request_id" ColumnName="request_id" />
+                <ScalarProperty Name="peer" ColumnName="peer" />
+                <ScalarProperty Name="peer_db" ColumnName="peer_db" />
+                <ScalarProperty Name="received_date" ColumnName="received_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_topologyrequest">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_topologyrequest">
+              <MappingFragment StoreEntitySet="MSpeer_topologyrequest">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="publication" ColumnName="publication" />
+                <ScalarProperty Name="sent_date" ColumnName="sent_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpeer_topologyresponse">
+            <EntityTypeMapping TypeName="AcademyModel.MSpeer_topologyresponse">
+              <MappingFragment StoreEntitySet="MSpeer_topologyresponse">
+                <ScalarProperty Name="request_id" ColumnName="request_id" />
+                <ScalarProperty Name="peer" ColumnName="peer" />
+                <ScalarProperty Name="peer_version" ColumnName="peer_version" />
+                <ScalarProperty Name="peer_db" ColumnName="peer_db" />
+                <ScalarProperty Name="originator_id" ColumnName="originator_id" />
+                <ScalarProperty Name="peer_conflict_retention" ColumnName="peer_conflict_retention" />
+                <ScalarProperty Name="received_date" ColumnName="received_date" />
+                <ScalarProperty Name="connection_info" ColumnName="connection_info" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSpub_identity_range">
+            <EntityTypeMapping TypeName="AcademyModel.MSpub_identity_range">
+              <MappingFragment StoreEntitySet="MSpub_identity_range">
+                <ScalarProperty Name="objid" ColumnName="objid" />
+                <ScalarProperty Name="range" ColumnName="range" />
+                <ScalarProperty Name="pub_range" ColumnName="pub_range" />
+                <ScalarProperty Name="current_pub_range" ColumnName="current_pub_range" />
+                <ScalarProperty Name="threshold" ColumnName="threshold" />
+                <ScalarProperty Name="last_seed" ColumnName="last_seed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysarticlecolumns">
+            <EntityTypeMapping TypeName="AcademyModel.sysarticlecolumn">
+              <MappingFragment StoreEntitySet="sysarticlecolumns">
+                <ScalarProperty Name="artid" ColumnName="artid" />
+                <ScalarProperty Name="colid" ColumnName="colid" />
+                <ScalarProperty Name="is_udt" ColumnName="is_udt" />
+                <ScalarProperty Name="is_xml" ColumnName="is_xml" />
+                <ScalarProperty Name="is_max" ColumnName="is_max" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysarticles">
+            <EntityTypeMapping TypeName="AcademyModel.sysarticle">
+              <MappingFragment StoreEntitySet="sysarticles">
+                <ScalarProperty Name="artid" ColumnName="artid" />
+                <ScalarProperty Name="creation_script" ColumnName="creation_script" />
+                <ScalarProperty Name="del_cmd" ColumnName="del_cmd" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="dest_table" ColumnName="dest_table" />
+                <ScalarProperty Name="filter" ColumnName="filter" />
+                <ScalarProperty Name="filter_clause" ColumnName="filter_clause" />
+                <ScalarProperty Name="ins_cmd" ColumnName="ins_cmd" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="objid" ColumnName="objid" />
+                <ScalarProperty Name="pubid" ColumnName="pubid" />
+                <ScalarProperty Name="pre_creation_cmd" ColumnName="pre_creation_cmd" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="sync_objid" ColumnName="sync_objid" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="upd_cmd" ColumnName="upd_cmd" />
+                <ScalarProperty Name="schema_option" ColumnName="schema_option" />
+                <ScalarProperty Name="dest_owner" ColumnName="dest_owner" />
+                <ScalarProperty Name="ins_scripting_proc" ColumnName="ins_scripting_proc" />
+                <ScalarProperty Name="del_scripting_proc" ColumnName="del_scripting_proc" />
+                <ScalarProperty Name="upd_scripting_proc" ColumnName="upd_scripting_proc" />
+                <ScalarProperty Name="custom_script" ColumnName="custom_script" />
+                <ScalarProperty Name="fire_triggers_on_snapshot" ColumnName="fire_triggers_on_snapshot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysarticleupdates">
+            <EntityTypeMapping TypeName="AcademyModel.sysarticleupdate">
+              <MappingFragment StoreEntitySet="sysarticleupdates">
+                <ScalarProperty Name="artid" ColumnName="artid" />
+                <ScalarProperty Name="pubid" ColumnName="pubid" />
+                <ScalarProperty Name="sync_ins_proc" ColumnName="sync_ins_proc" />
+                <ScalarProperty Name="sync_upd_proc" ColumnName="sync_upd_proc" />
+                <ScalarProperty Name="sync_del_proc" ColumnName="sync_del_proc" />
+                <ScalarProperty Name="autogen" ColumnName="autogen" />
+                <ScalarProperty Name="sync_upd_trig" ColumnName="sync_upd_trig" />
+                <ScalarProperty Name="conflict_tableid" ColumnName="conflict_tableid" />
+                <ScalarProperty Name="ins_conflict_proc" ColumnName="ins_conflict_proc" />
+                <ScalarProperty Name="identity_support" ColumnName="identity_support" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syspublications">
+            <EntityTypeMapping TypeName="AcademyModel.syspublication">
+              <MappingFragment StoreEntitySet="syspublications">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="pubid" ColumnName="pubid" />
+                <ScalarProperty Name="repl_freq" ColumnName="repl_freq" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="sync_method" ColumnName="sync_method" />
+                <ScalarProperty Name="snapshot_jobid" ColumnName="snapshot_jobid" />
+                <ScalarProperty Name="independent_agent" ColumnName="independent_agent" />
+                <ScalarProperty Name="immediate_sync" ColumnName="immediate_sync" />
+                <ScalarProperty Name="enabled_for_internet" ColumnName="enabled_for_internet" />
+                <ScalarProperty Name="allow_push" ColumnName="allow_push" />
+                <ScalarProperty Name="allow_pull" ColumnName="allow_pull" />
+                <ScalarProperty Name="allow_anonymous" ColumnName="allow_anonymous" />
+                <ScalarProperty Name="immediate_sync_ready" ColumnName="immediate_sync_ready" />
+                <ScalarProperty Name="allow_sync_tran" ColumnName="allow_sync_tran" />
+                <ScalarProperty Name="autogen_sync_procs" ColumnName="autogen_sync_procs" />
+                <ScalarProperty Name="retention" ColumnName="retention" />
+                <ScalarProperty Name="allow_queued_tran" ColumnName="allow_queued_tran" />
+                <ScalarProperty Name="snapshot_in_defaultfolder" ColumnName="snapshot_in_defaultfolder" />
+                <ScalarProperty Name="alt_snapshot_folder" ColumnName="alt_snapshot_folder" />
+                <ScalarProperty Name="pre_snapshot_script" ColumnName="pre_snapshot_script" />
+                <ScalarProperty Name="post_snapshot_script" ColumnName="post_snapshot_script" />
+                <ScalarProperty Name="compress_snapshot" ColumnName="compress_snapshot" />
+                <ScalarProperty Name="ftp_address" ColumnName="ftp_address" />
+                <ScalarProperty Name="ftp_port" ColumnName="ftp_port" />
+                <ScalarProperty Name="ftp_subdirectory" ColumnName="ftp_subdirectory" />
+                <ScalarProperty Name="ftp_login" ColumnName="ftp_login" />
+                <ScalarProperty Name="ftp_password" ColumnName="ftp_password" />
+                <ScalarProperty Name="allow_dts" ColumnName="allow_dts" />
+                <ScalarProperty Name="allow_subscription_copy" ColumnName="allow_subscription_copy" />
+                <ScalarProperty Name="centralized_conflicts" ColumnName="centralized_conflicts" />
+                <ScalarProperty Name="conflict_retention" ColumnName="conflict_retention" />
+                <ScalarProperty Name="conflict_policy" ColumnName="conflict_policy" />
+                <ScalarProperty Name="queue_type" ColumnName="queue_type" />
+                <ScalarProperty Name="ad_guidname" ColumnName="ad_guidname" />
+                <ScalarProperty Name="backward_comp_level" ColumnName="backward_comp_level" />
+                <ScalarProperty Name="allow_initialize_from_backup" ColumnName="allow_initialize_from_backup" />
+                <ScalarProperty Name="min_autonosync_lsn" ColumnName="min_autonosync_lsn" />
+                <ScalarProperty Name="replicate_ddl" ColumnName="replicate_ddl" />
+                <ScalarProperty Name="options" ColumnName="options" />
+                <ScalarProperty Name="originator_id" ColumnName="originator_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysschemaarticles">
+            <EntityTypeMapping TypeName="AcademyModel.sysschemaarticle">
+              <MappingFragment StoreEntitySet="sysschemaarticles">
+                <ScalarProperty Name="artid" ColumnName="artid" />
+                <ScalarProperty Name="creation_script" ColumnName="creation_script" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="dest_object" ColumnName="dest_object" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="objid" ColumnName="objid" />
+                <ScalarProperty Name="pubid" ColumnName="pubid" />
+                <ScalarProperty Name="pre_creation_cmd" ColumnName="pre_creation_cmd" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="schema_option" ColumnName="schema_option" />
+                <ScalarProperty Name="dest_owner" ColumnName="dest_owner" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syssubscriptions">
+            <EntityTypeMapping TypeName="AcademyModel.syssubscription">
+              <MappingFragment StoreEntitySet="syssubscriptions">
+                <ScalarProperty Name="artid" ColumnName="artid" />
+                <ScalarProperty Name="srvid" ColumnName="srvid" />
+                <ScalarProperty Name="dest_db" ColumnName="dest_db" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="sync_type" ColumnName="sync_type" />
+                <ScalarProperty Name="login_name" ColumnName="login_name" />
+                <ScalarProperty Name="subscription_type" ColumnName="subscription_type" />
+                <ScalarProperty Name="distribution_jobid" ColumnName="distribution_jobid" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="update_mode" ColumnName="update_mode" />
+                <ScalarProperty Name="loopback_detection" ColumnName="loopback_detection" />
+                <ScalarProperty Name="queued_reinit" ColumnName="queued_reinit" />
+                <ScalarProperty Name="nosync_type" ColumnName="nosync_type" />
+                <ScalarProperty Name="srvname" ColumnName="srvname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="systranschemas">
+            <EntityTypeMapping TypeName="AcademyModel.systranschema">
+              <MappingFragment StoreEntitySet="systranschemas">
+                <ScalarProperty Name="tabid" ColumnName="tabid" />
+                <ScalarProperty Name="startlsn" ColumnName="startlsn" />
+                <ScalarProperty Name="endlsn" ColumnName="endlsn" />
+                <ScalarProperty Name="typeid" ColumnName="typeid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3035444131374545">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3035444131374545">
+              <MappingFragment StoreEntitySet="syncobj_0x3035444131374545">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3038394244463041">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3038394244463041">
+              <MappingFragment StoreEntitySet="syncobj_0x3038394244463041">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3045423137443445">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3045423137443445">
+              <MappingFragment StoreEntitySet="syncobj_0x3045423137443445">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3138324637443239">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3138324637443239">
+              <MappingFragment StoreEntitySet="syncobj_0x3138324637443239">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3141323845433736">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3141323845433736">
+              <MappingFragment StoreEntitySet="syncobj_0x3141323845433736">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3141454244323645">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3141454244323645">
+              <MappingFragment StoreEntitySet="syncobj_0x3141454244323645">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3232383545423244">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3232383545423244">
+              <MappingFragment StoreEntitySet="syncobj_0x3232383545423244">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3244334339463136">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3244334339463136">
+              <MappingFragment StoreEntitySet="syncobj_0x3244334339463136">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3346333241374434">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3346333241374434">
+              <MappingFragment StoreEntitySet="syncobj_0x3346333241374434">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CuratorId" ColumnName="CuratorId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3638394345374546">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3638394345374546">
+              <MappingFragment StoreEntitySet="syncobj_0x3638394345374546">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x3930444345393738">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x3930444345393738">
+              <MappingFragment StoreEntitySet="syncobj_0x3930444345393738">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="LectureId" ColumnName="LectureId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4144384533353531">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4144384533353531">
+              <MappingFragment StoreEntitySet="syncobj_0x4144384533353531">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4145464634383043">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4145464634383043">
+              <MappingFragment StoreEntitySet="syncobj_0x4145464634383043">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FacultyId" ColumnName="FacultyId" />
+                <ScalarProperty Name="HeadId" ColumnName="HeadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4234303944444541">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4234303944444541">
+              <MappingFragment StoreEntitySet="syncobj_0x4234303944444541">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DeanId" ColumnName="DeanId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4244443833453936">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4244443833453936">
+              <MappingFragment StoreEntitySet="syncobj_0x4244443833453936">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="LectureId" ColumnName="LectureId" />
+                <ScalarProperty Name="LectureRoomId" ColumnName="LectureRoomId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4335364237313041">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4335364237313041">
+              <MappingFragment StoreEntitySet="syncobj_0x4335364237313041">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4634313333333132">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4634313333333132">
+              <MappingFragment StoreEntitySet="syncobj_0x4634313333333132">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="syncobj_0x4635443342323534">
+            <EntityTypeMapping TypeName="AcademyModel.syncobj_0x4635443342323534">
+              <MappingFragment StoreEntitySet="syncobj_0x4635443342323534">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysextendedarticlesviews">
+            <EntityTypeMapping TypeName="AcademyModel.sysextendedarticlesview">
+              <MappingFragment StoreEntitySet="sysextendedarticlesview">
+                <ScalarProperty Name="artid" ColumnName="artid" />
+                <ScalarProperty Name="creation_script" ColumnName="creation_script" />
+                <ScalarProperty Name="del_cmd" ColumnName="del_cmd" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="dest_table" ColumnName="dest_table" />
+                <ScalarProperty Name="filter" ColumnName="filter" />
+                <ScalarProperty Name="filter_clause" ColumnName="filter_clause" />
+                <ScalarProperty Name="ins_cmd" ColumnName="ins_cmd" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="objid" ColumnName="objid" />
+                <ScalarProperty Name="pubid" ColumnName="pubid" />
+                <ScalarProperty Name="pre_creation_cmd" ColumnName="pre_creation_cmd" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="sync_objid" ColumnName="sync_objid" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="upd_cmd" ColumnName="upd_cmd" />
+                <ScalarProperty Name="schema_option" ColumnName="schema_option" />
+                <ScalarProperty Name="dest_owner" ColumnName="dest_owner" />
+                <ScalarProperty Name="ins_scripting_proc" ColumnName="ins_scripting_proc" />
+                <ScalarProperty Name="del_scripting_proc" ColumnName="del_scripting_proc" />
+                <ScalarProperty Name="upd_scripting_proc" ColumnName="upd_scripting_proc" />
+                <ScalarProperty Name="custom_script" ColumnName="custom_script" />
+                <ScalarProperty Name="fire_triggers_on_snapshot" ColumnName="fire_triggers_on_snapshot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
