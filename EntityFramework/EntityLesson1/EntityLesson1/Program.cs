@@ -5,10 +5,13 @@ using EntityLesson1.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-using AcademyContext context = new();
 
-var teachers = context.Teachers.ToList();
-var assistans = context.Assistants.ToList();
+#region Lesson1
+
+// using AcademyContext context = new();
+
+// var teachers = context.Teachers.ToList();
+// var assistans = context.Assistants.ToList();
 
 // var new_teacher = new Teacher()
 // {
@@ -56,8 +59,33 @@ var assistans = context.Assistants.ToList();
 
 
 
-List<Teacher> b = new List<Teacher>(from i in teachers where i.Name == "Ilkin" select i);
+// Console.WriteLine(teachers[0].Name);
+// List<Teacher> b = new List<Teacher>(from i in teachers where i.Name == "Ilkin" select i);
+//
+// b[0].Name = "Test";
 
-b[0].Name = "Test";
+// context.SaveChanges();
 
-context.SaveChanges();
+#endregion
+
+
+#region Includes
+
+using AcademyContext context = new();
+
+var lectures = context.GroupsLectures
+    .Include(x => x.Group)
+    .ThenInclude(x => x.Department)
+    .ThenInclude(x => x.Faculty)
+    .Include(x => x.Lecture)
+    .ThenInclude(x => x.Teacher).ToList();
+    
+
+
+foreach (var item in lectures)
+{
+    Console.WriteLine($"{item.Id}: {item.Group.Name},\t{item.Group.Department.Name}");
+}
+
+
+#endregion

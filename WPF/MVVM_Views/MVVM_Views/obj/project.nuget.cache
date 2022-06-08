@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u/YHvCEZo6IxNptlJ7jfLpwfBMMv1cdzIdjdm7KacMva30zacUagRRKFlqicGvcRAtf84kcnGv6LAvG15QCAiA==",
+  "dgSpecHash": "B6/J5YsqpXpin62RnQ904k/XmEd0F/b83X4kJLPUyVeprlsvMHqmTKc4mxW/howMEtkuzSjrOySGEhjmyrW9AA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elvin\\RiderProjects\\1211\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
+  "projectFilePath": "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elvin\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\elvin\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elvin\\RiderProjects\\1211\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj": {}
+    "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elvin\\RiderProjects\\1211\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj": {
+    "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elvin\\RiderProjects\\1211\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
+        "projectUniqueName": "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
         "projectName": "MVVM_Views",
-        "projectPath": "C:\\Users\\elvin\\RiderProjects\\1211\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
+        "projectPath": "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
         "packagesPath": "C:\\Users\\elvin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elvin\\RiderProjects\\1211\\MVVM_Views\\MVVM_Views\\obj\\",
+        "outputPath": "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\elvin\RiderProjects\1211\MVVM_Views\MVVM_Views\obj\Debug\net6.0-windows\
+C:\Work\FBMS_1211_RU\WPF\MVVM_Views\MVVM_Views\obj\Debug\net6.0-windows\
 MVVM_Views
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\elvin\RiderProjects\1211\MVVM_Views\MVVM_Views\App.xaml
+C:\Work\FBMS_1211_RU\WPF\MVVM_Views\MVVM_Views\App.xaml
 4-270907449
 
 21449962850
 196275375807
 View\FirstView.xaml;View\MainView.xaml;View\SecondView.xaml;View\ThirdView.xaml;
 
-False
+True
 

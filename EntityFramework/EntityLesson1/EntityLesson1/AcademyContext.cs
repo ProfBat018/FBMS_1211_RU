@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EntityLesson1
 {
-    public partial class AcademyContext : DbContext
+    public class AcademyContext : DbContext
     {
         public AcademyContext()
         {
