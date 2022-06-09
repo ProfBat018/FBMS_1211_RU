@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Reflection.Metadata;
 using EntityLesson1;
 using EntityLesson1.Model;
@@ -70,22 +71,42 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 
 
 #region Includes
-
-using AcademyContext context = new();
-
-var lectures = context.GroupsLectures
-    .Include(x => x.Group)
-    .ThenInclude(x => x.Department)
-    .ThenInclude(x => x.Faculty)
-    .Include(x => x.Lecture)
-    .ThenInclude(x => x.Teacher).ToList();
-    
-
-
-foreach (var item in lectures)
-{
-    Console.WriteLine($"{item.Id}: {item.Group.Name},\t{item.Group.Department.Name}");
-}
+//
+// using AcademyContext context = new();
+//
+// var lectures = context.GroupsLectures
+//     .Include(x => x.Group)
+//     .ThenInclude(x => x.Department)
+//     .ThenInclude(x => x.Faculty)
+//     .Include(x => x.Lecture)
+//     .ThenInclude(x => x.Teacher).ToList();
+//     
+//
+//
+// foreach (var item in lectures)
+// {
+//     Console.WriteLine($"{item.Id}: {item.Group.Name},\t{item.Group.Department.Name}");
+// }
 
 
 #endregion
+
+
+using AcademyContext context = new();
+
+var props = context.GetType().GetProperties().ToList();
+
+List<PropertyInfo> data = new();
+
+
+foreach (var item in props)
+{
+    if (item.PropertyType.ToString().Contains("DbSet"))
+    {
+        data.Add(item);
+    }
+}
+
+
+
+// var sets = props.Where(x => x.GetType().Name == "")
