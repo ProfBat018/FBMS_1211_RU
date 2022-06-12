@@ -1,19 +1,14 @@
-﻿using System.Security.AccessControl;
+﻿using FluentApi;
+using System;
 
-string path = @"C:\Windows\System32\config";
 
-// DirectoryInfo info = new(path);
-//
-// DirectorySecurity security = info.GetAccessControl();
-//
-// security.AddAccessRule(new FileSystemAccessRule(System.Security.Principal.WindowsIdentity.GetCurrent().Name, FileSystemRights.Read, AccessControlType.Allow));
-//
-//
-// info.SetAccessControl(security);
+using AcademyContext context = new();
 
-var files = Directory.GetFiles(path);
+var teachers = context.Teachers.Where(x => x.Id == 1);
 
-foreach (var item in files)
-{
-    Console.WriteLine(item);   
-}
+
+
+
+
+
+

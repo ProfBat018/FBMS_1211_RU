@@ -35,11 +35,6 @@ namespace OptionsBuilder
         public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<staff> staff { get; set; } = null!;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-          
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Assistant>(entity =>

@@ -39,7 +39,8 @@ namespace FluentApi
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-KNH15NM;Initial Catalog=University;Integrated Security=True;");
+                optionsBuilder
+                    .UseSqlServer("Data Source=DESKTOP-KNH15NM;Initial Catalog=University;Integrated Security=True;");
             }
         }
 

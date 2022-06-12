@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 using EntityLesson1;
 using EntityLesson1.Model;
 using Microsoft.EntityFrameworkCore;
@@ -92,21 +93,63 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 #endregion
 
 
+//using AcademyContext context = new();
+//var props = context.GetType().GetProperties().ToList();
+
+//List<PropertyInfo> data = new();
+
+
+//foreach (var item in props)
+//{
+//    if (item.PropertyType.ToString().Contains("DbSet"))
+//    {
+//        data.Add(item);
+//    }
+//}
+
+
+#region Lazy
+
+// using AcademyContext context = new();
+//
+//
+// var assistants = context.Assistants.ToList();
+//
+//
+// foreach (var item in assistants)
+// {
+//     Console.WriteLine(item.Id.ToString() + '\t' + item.Teacher.Name);
+// }
+
+#endregion
+
+#region Eager
+
+
+// using AcademyContext context = new();
+//
+// var assistants = context.Assistants.Include(x => x.Teacher).ToList();
+//
+// foreach (var item in assistants)
+// {
+//     Console.WriteLine(item.Id.ToString() + '\t' + item.Teacher.Name);
+// }
+
+
+#endregion
+
+
+#region Explicit
+
+
 using AcademyContext context = new();
 
-var props = context.GetType().GetProperties().ToList();
+var data = context.Assistants.First();
+var collection = context.Assistants.ToList();
 
-List<PropertyInfo> data = new();
+// context.Entry(data).Reference(x=> x.Teacher).Load();
 
-
-foreach (var item in props)
-{
-    if (item.PropertyType.ToString().Contains("DbSet"))
-    {
-        data.Add(item);
-    }
-}
+Console.WriteLine(data.Teacher.Name);
 
 
-
-// var sets = props.Where(x => x.GetType().Name == "")
+#endregion

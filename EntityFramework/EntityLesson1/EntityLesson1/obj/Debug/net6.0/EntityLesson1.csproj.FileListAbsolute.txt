@@ -56,3 +56,5 @@ C:\Work\FBMS_1211_RU\EntityFramework\EntityLesson1\EntityLesson1\obj\Debug\net6.
 C:\Work\FBMS_1211_RU\EntityFramework\EntityLesson1\EntityLesson1\obj\Debug\net6.0\EntityLesson1.pdb
 C:\Work\FBMS_1211_RU\EntityFramework\EntityLesson1\EntityLesson1\obj\Debug\net6.0\EntityLesson1.genruntimeconfig.cache
 C:\Work\FBMS_1211_RU\EntityFramework\EntityLesson1\EntityLesson1\obj\Debug\net6.0\ref\EntityLesson1.dll
+C:\Work\FBMS_1211_RU\EntityFramework\EntityLesson1\EntityLesson1\bin\Debug\net6.0\Castle.Core.dll
+C:\Work\FBMS_1211_RU\EntityFramework\EntityLesson1\EntityLesson1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll

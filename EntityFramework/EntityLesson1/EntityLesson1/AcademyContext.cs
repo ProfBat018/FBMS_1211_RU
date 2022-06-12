@@ -35,7 +35,9 @@ namespace EntityLesson1
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-KNH15NM;Initial Catalog=Academy;Integrated Security=True;");
+                optionsBuilder
+                    // .UseLazyLoadingProxies()
+                    .UseSqlServer("Data Source=DESKTOP-KNH15NM;Initial Catalog=Academy;Integrated Security=True;");
             }
         }
     }
