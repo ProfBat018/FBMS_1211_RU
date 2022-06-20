@@ -10,12 +10,12 @@ namespace BravoRepository.EntityContext
 {
     public class BravoDbContext : DbContext
     {
-   
-        public DbSet<Cashiers> Cashiers { get; set; }
-        public DbSet<Check> Check { get; set; }
-        public DbSet<DateInfo> DateInfo { get; set; }
-        public DbSet<Products> Products { get; set; }
-        public DbSet<Stock> Stock { get; set; }
+
+        public DbSet<Cashiers> Cashiers { get; set; } = null!;
+        public DbSet<Check> Check { get; set; } = null!;
+        public DbSet<DateInfo> DateInfo { get; set; } = null!;
+        public DbSet<Products> Products { get; set; } = null!;
+        public DbSet<Stock> Stock { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
