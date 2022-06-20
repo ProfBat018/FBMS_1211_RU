@@ -39,6 +39,7 @@ namespace Bravo
 
             Container.RegisterSingleton<MainViewModel>();
             Container.RegisterSingleton<HomeViewModel>();
+            Container.RegisterSingleton<AuthViewModel>();
 
             Container.Verify();
         }

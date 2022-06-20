@@ -4,11 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bravo.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        Background="#ffffff">
     
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button  VerticalAlignment="Top"
+                 Width="20" Height="20"
+                 HorizontalAlignment="Right" 
+                 Margin="0 13 14 0"
+                 Opacity="0.3" 
+                 Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                 Command="{Binding CloseCommand}">
+            <materialDesign:PackIcon Kind="Close"/>
+        </Button>
+
         <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

@@ -5,8 +5,51 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Bravo.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" FontSize="18"
+             FontFamily="{DynamicResource MaterialDesignFont}" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Background="Transparent">
+
+    <UserControl.Resources>
+        <BitmapImage x:Key="splashScreen" UriSource="/Resources/Img/cashier.jpg"/>
+    </UserControl.Resources>
+
     <Grid>
-            
+
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="30" ShadowDepth="1" Opacity="0.4"/>
+        </Grid.Effect>
+
+        <Border  CornerRadius="0 5 5 0">
+            <Grid>
+              
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="640" Height="305">
+                    <TextBox BorderThickness="0 0 0 1.5"
+                             BorderBrush="#C5C8CC"
+                             materialDesign:HintAssist.FloatingOffset="0,-20"
+                             materialDesign:HintAssist.Hint="Username"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <PasswordBox 
+                        BorderThickness="0 0 0 1.5"
+                                 BorderBrush="#C5C8CC"
+                        materialDesign:HintAssist.FloatingOffset="0,-18"
+                        materialDesign:HintAssist.Hint="Repeat Password" 
+                        Password="" Margin="0 27 0 0"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+
+
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Content="Login" 
+                                materialDesign:ButtonAssist.CornerRadius="22"
+                                FontSize="16" 
+                                Style="{StaticResource MaterialDesignFlatButton}" 
+                                Height="75"
+                                Width="150"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
     </Grid>
 </UserControl>

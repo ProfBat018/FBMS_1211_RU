@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bravo.View;
+using GalaSoft.MvvmLight.Command;
 
 namespace Bravo.ViewModel
 {
@@ -28,7 +30,16 @@ namespace Bravo.ViewModel
                 CurrentViewModel = viewModel;
             });
 
-            _navigationService.NavigateTo<HomeViewModel>();
+            _navigationService.NavigateTo<AuthViewModel>();
+        }
+
+        private RelayCommand? closeCommand;
+        public RelayCommand CloseCommand
+        {
+            get => new(() =>
+            {
+                App.Container.GetInstance<MainWindow>().Close();
+            });
         }
     }
 }

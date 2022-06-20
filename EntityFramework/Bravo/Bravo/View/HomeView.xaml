@@ -16,6 +16,6 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
 
     <Grid>
-        <Button Content="Test"/>
+        <Button Content="Test" Command="{Binding TestCommand}"/>
     </Grid>
 </UserControl>
