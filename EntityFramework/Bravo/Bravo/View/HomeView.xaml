@@ -16,6 +16,31 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
 
     <Grid>
-        <Button Content="Test" Command="{Binding TestCommand}"/>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=10}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label VerticalAlignment="Center" Content="Name: "/>
+                            <Label VerticalAlignment="Center" Content="{Binding Product.Name}"/>
+
+                            <Button  Background="Green" Height="15" Width="30">
+                                <materialDesign:PackIcon Kind="CheckBold"></materialDesign:PackIcon>
+                            </Button>
+                            <Button Background="Red" Height="15" Width="30">
+                                <materialDesign:PackIcon Kind="None"></materialDesign:PackIcon>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </UserControl>

@@ -150,3 +150,4 @@ C:\Work\FBMS_1211_RU\EntityFramework\Bravo\Bravo\obj\Debug\net6.0-windows\Bravo.
 C:\Work\FBMS_1211_RU\EntityFramework\Bravo\Bravo\obj\Debug\net6.0-windows\Bravo.csproj.CopyComplete
 C:\Work\FBMS_1211_RU\EntityFramework\Bravo\Bravo\obj\Debug\net6.0-windows\Bravo.genruntimeconfig.cache
 C:\Work\FBMS_1211_RU\EntityFramework\Bravo\Bravo\obj\Debug\net6.0-windows\ref\Bravo.dll
+C:\Work\FBMS_1211_RU\EntityFramework\Bravo\Bravo\bin\Debug\net6.0-windows\Resources\Data\users.json

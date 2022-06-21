@@ -10,46 +10,54 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              Background="Transparent">
 
-    <UserControl.Resources>
-        <BitmapImage x:Key="splashScreen" UriSource="/Resources/Img/cashier.jpg"/>
-    </UserControl.Resources>
-
     <Grid>
-
         <Grid.Effect>
             <DropShadowEffect BlurRadius="30" ShadowDepth="1" Opacity="0.4"/>
         </Grid.Effect>
 
         <Border  CornerRadius="0 5 5 0">
             <Grid>
-              
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="640" Height="305">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Welcome to Bravo"
+                               Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                               FontSize="32"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="640" Height="305">
                     <TextBox BorderThickness="0 0 0 1.5"
                              BorderBrush="#C5C8CC"
                              materialDesign:HintAssist.FloatingOffset="0,-20"
                              materialDesign:HintAssist.Hint="Username"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text="{Binding UserEntry.Username}"/>
+
                     <PasswordBox 
+                        Name="PasswordBox"
                         BorderThickness="0 0 0 1.5"
                                  BorderBrush="#C5C8CC"
                         materialDesign:HintAssist.FloatingOffset="0,-18"
-                        materialDesign:HintAssist.Hint="Repeat Password" 
+                        materialDesign:HintAssist.Hint="Password" 
                         Password="" Margin="0 27 0 0"
                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-
 
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                         <Button Content="Login" 
                                 materialDesign:ButtonAssist.CornerRadius="22"
                                 FontSize="16" 
-                                Style="{StaticResource MaterialDesignFlatButton}" 
+                                Style="{StaticResource MaterialDesignFlatDarkButton}" 
                                 Height="75"
-                                Width="150"/>
+                                Width="125"
+                                Margin="0 15 0 0"
+                                Command="{Binding LoginCommand}"
+                                CommandParameter="{Binding ElementName=PasswordBox}"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
-
     </Grid>
 </UserControl>

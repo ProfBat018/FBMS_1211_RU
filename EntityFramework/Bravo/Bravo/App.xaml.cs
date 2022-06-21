@@ -15,9 +15,6 @@ using System.Windows;
 
 namespace Bravo
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         public static Container? Container { get; set; }
@@ -36,6 +33,7 @@ namespace Bravo
             Container = new Container();
             Container.RegisterSingleton<IMessenger, Messenger>();
             Container.RegisterSingleton<INavigationService, NavigationService>();
+            Container.RegisterSingleton<IAuthService, AuthService>();
 
             Container.RegisterSingleton<MainViewModel>();
             Container.RegisterSingleton<HomeViewModel>();

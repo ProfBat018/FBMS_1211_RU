@@ -24,6 +24,7 @@ namespace BravoRepository.EntityContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
         }
     }
 }

@@ -22,7 +22,7 @@
                  Margin="0 13 14 0"
                  Opacity="0.3" 
                  Style="{StaticResource MaterialDesignFloatingActionLightButton}"
-                 Command="{Binding CloseCommand}">
+                 IsCancel="True">
             <materialDesign:PackIcon Kind="Close"/>
         </Button>
 

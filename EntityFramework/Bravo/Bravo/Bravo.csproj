@@ -24,4 +24,10 @@
     <ProjectReference Include="..\BravoRepository\BravoRepository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Resources\Data\users.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
