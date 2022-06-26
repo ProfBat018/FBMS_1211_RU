@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Bravo.View"
+             xmlns:ViewModel="clr-namespace:Bravo.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
               xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -13,21 +14,22 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}">
+     FontFamily="{DynamicResource MaterialDesignFont}" 
+             d:DataContext="{d:DesignInstance ViewModel:HomeViewModel}">
 
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=10}">
+        <ListBox  ItemsSource="{Binding ProductsList}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label VerticalAlignment="Center" Content="Name: "/>
-                            <Label VerticalAlignment="Center" Content="{Binding Product.Name}"/>
+                            <Label VerticalAlignment="Center" Content="{Binding Name}"/>
 
                             <Button  Background="Green" Height="15" Width="30">
                                 <materialDesign:PackIcon Kind="CheckBold"></materialDesign:PackIcon>
@@ -41,5 +43,59 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
+    </Grid>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <ComboBox 
+            IsEditable="True"
+            SelectedItem="{Binding Selected}"
+            ItemsSource="{Binding ProductsList}">
+        </ComboBox>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="0.3*"/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0" Grid.Column="0">
+                <TextBlock Margin="0 15 0 15" VerticalAlignment="Center" Text="{Binding Path=Selected.Name, StringFormat='Name: {0}'}"/>
+                <TextBlock Margin="0 15 0 15" VerticalAlignment="Center" Text="{Binding Path=Selected.Manufacturer, StringFormat='Manufacturer: {0}'}"/>
+                <TextBlock Margin="0 15 0 15" VerticalAlignment="Center" Text="{Binding Path=Selected.Price, StringFormat='Price: {0}'}"/>
+            </StackPanel>
+            
+            <ListBox
+                     Grid.Column="1"
+                     Grid.RowSpan="3">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                        
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Button
+                Command="{Binding AddCommand}"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Background="Green">
+                <materialDesign:PackIcon Kind="Approve" Height="23" Width="28"/>
+            </Button>
+        </Grid>
     </Grid>
+
 </UserControl>

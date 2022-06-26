@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BravoRepository.Services.Interfaces;
 
 namespace BravoRepository.EntityModel
 {
-    public class Stock
+    public class Stock : IBaseEntity
     {
         public Stock()
         {

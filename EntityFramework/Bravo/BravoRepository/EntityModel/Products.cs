@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BravoRepository.Services.Interfaces;
 
 namespace BravoRepository.EntityModel
 {
-    public class Products
+    public class Products : IBaseEntity
     {
         public Products()
         {
@@ -17,5 +18,10 @@ namespace BravoRepository.EntityModel
         public string? Manufacturer { get; set; }
         public bool isCountable { get; set; }
         public ICollection<Stock> Stocks { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

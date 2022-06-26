@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BravoRepository.Services.Interfaces;
 
 namespace BravoRepository.EntityModel
 {
-    public class Cashiers
+    public class Cashiers : IBaseEntity
     {
         public Cashiers()
         {
