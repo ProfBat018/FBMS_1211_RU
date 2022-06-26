@@ -2283,23 +2283,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elvin\\.nuget\\packages\\": {},
+    "C:\\Users\\e.azimov\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\FBMS_1211_RU\\EntityFramework\\Bravo\\BravoRepository\\BravoRepository.csproj",
+      "projectUniqueName": "C:\\Users\\e.azimov\\FBMS_1211_RU\\EntityFramework\\Bravo\\BravoRepository\\BravoRepository.csproj",
       "projectName": "BravoRepository",
-      "projectPath": "C:\\Work\\FBMS_1211_RU\\EntityFramework\\Bravo\\BravoRepository\\BravoRepository.csproj",
-      "packagesPath": "C:\\Users\\elvin\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\FBMS_1211_RU\\EntityFramework\\Bravo\\BravoRepository\\obj\\",
+      "projectPath": "C:\\Users\\e.azimov\\FBMS_1211_RU\\EntityFramework\\Bravo\\BravoRepository\\BravoRepository.csproj",
+      "packagesPath": "C:\\Users\\e.azimov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\e.azimov\\FBMS_1211_RU\\EntityFramework\\Bravo\\BravoRepository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\elvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\e.azimov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2308,7 +2308,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2359,7 +2358,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

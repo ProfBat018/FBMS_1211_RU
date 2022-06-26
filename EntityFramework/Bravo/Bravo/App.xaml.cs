@@ -34,6 +34,9 @@ namespace Bravo
             Container.RegisterSingleton<IMessenger, Messenger>();
             Container.RegisterSingleton<INavigationService, NavigationService>();
             Container.RegisterSingleton<IAuthService, AuthService>();
+            Container.RegisterSingleton<IRepositoryData, RepositoryData>();
+
+            Container.RegisterSingleton<MainWindow>();
 
             Container.RegisterSingleton<MainViewModel>();
             Container.RegisterSingleton<HomeViewModel>();

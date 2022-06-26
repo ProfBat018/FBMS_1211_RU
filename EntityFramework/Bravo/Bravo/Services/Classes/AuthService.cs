@@ -14,7 +14,7 @@ namespace Bravo.Services.Classes
     {
         public List<User>? GetUsers()
         {
-            using FileStream fs = new(@"C:\Work\FBMS_1211_RU\EntityFramework\Bravo\Bravo\Resources\Data\users.json", FileMode.Open);
+            using FileStream fs = new(@"Resources\Data\users.json", FileMode.Open);
             using StreamReader sr = new(fs);
 
 

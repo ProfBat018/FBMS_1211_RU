@@ -9,22 +9,39 @@
         Title="MainWindow" Height="450" Width="800"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
-        Background="#ffffff">
-    
+        Background="#ffffff"
+        Closed="Window_Closed">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button  VerticalAlignment="Top"
+
+        <WrapPanel Orientation="Horizontal"
+                   HorizontalAlignment="Right">
+            <Button 
+                VerticalAlignment="Top"
+                 Width="20" Height="20"
+                 HorizontalAlignment="Right" 
+                 Margin="0 13 14 0"
+                 Opacity="0.3" 
+                 Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                 Click="Button_Click">
+                <materialDesign:PackIcon Kind="WindowMinimize"/>
+            </Button>
+            
+            <Button  
+                 VerticalAlignment="Top"
                  Width="20" Height="20"
                  HorizontalAlignment="Right" 
                  Margin="0 13 14 0"
                  Opacity="0.3" 
                  Style="{StaticResource MaterialDesignFloatingActionLightButton}"
                  IsCancel="True">
-            <materialDesign:PackIcon Kind="Close"/>
-        </Button>
+                <materialDesign:PackIcon Kind="Close"/>
+            </Button>
+        </WrapPanel>
 
         <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
     </Grid>

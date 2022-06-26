@@ -12,9 +12,8 @@ namespace BravoRepository.EntityModel
         {
             DateInfos = new HashSet<DateInfo>();
         }
-
+        
         public int Id { get; set; }
-        public int ProductId { get; set; }
         public float Count { get; set; }
         public float Price { get; set; }
         public int VAT { get; set; }

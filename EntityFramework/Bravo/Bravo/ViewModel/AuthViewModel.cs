@@ -36,11 +36,16 @@ namespace Bravo.ViewModel
             {
                 var users = _authService.GetUsers();
 
-                if (users == null) return;
+                if (users != null)
+                {
 
-                foreach (var user in users)
-                    if (user.Username == UserEntry.Username && user.Password == param.Password)
-                        _navigationService.NavigateTo<HomeViewModel>();
+                    foreach (var user in users)
+                    {
+                        if (user.Username == UserEntry.Username && user.Password == param.Password)
+                            _navigationService.NavigateTo<HomeViewModel>();
+                    }
+                }
+
             });
         }
     }

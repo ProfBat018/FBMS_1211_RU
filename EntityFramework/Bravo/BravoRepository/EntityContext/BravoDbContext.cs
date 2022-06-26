@@ -17,6 +17,10 @@ namespace BravoRepository.EntityContext
         public DbSet<Products> Products { get; set; } = null!;
         public DbSet<Stock> Stock { get; set; } = null!;
 
+        public BravoDbContext(DbContextOptions<BravoDbContext> options) : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BravoDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");

@@ -16,9 +16,8 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
 
     <Grid>
-        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         

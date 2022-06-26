@@ -18,8 +18,6 @@ namespace BravoRepository.EntityModel
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Surname { get; set; }
-        public string? Login { get; set; }
-        public string? Password { get; set; }
         public ICollection<Stock> Stocks { get; set; }
         public ICollection<Check> Checks{ get; set; }
     }
