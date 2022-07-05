@@ -1,0 +1,15 @@
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\bin\Debug\net6.0\SealedMethod.exe
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\bin\Debug\net6.0\SealedMethod.deps.json
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\bin\Debug\net6.0\SealedMethod.runtimeconfig.json
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\bin\Debug\net6.0\SealedMethod.dll
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\bin\Debug\net6.0\SealedMethod.pdb
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.csproj.AssemblyReference.cache
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.AssemblyInfoInputs.cache
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.AssemblyInfo.cs
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.csproj.CoreCompileInputs.cache
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.dll
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\refint\SealedMethod.dll
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.pdb
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\SealedMethod.genruntimeconfig.cache
+C:\Users\e.azimov\FBMS_1211_RU\C#10\SealedMethod\SealedMethod\obj\Debug\net6.0\ref\SealedMethod.dll
