@@ -134,6 +134,10 @@ namespace ThreadFirst
             thread.Resume();
             Console.WriteLine(thread.ThreadState);
             #endregion
+
+
+            object a = new object();
+
         }
     }
 }
