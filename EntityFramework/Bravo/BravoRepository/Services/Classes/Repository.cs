@@ -18,7 +18,7 @@ namespace BravoRepository.Services.Classes
         public Repository()
         {
             DbConfig config = new();
-            BravoDbContext =  config.ConnectTo("BravoDb");
+            BravoDbContext =  config.ConnectTo("BravoDbStep");
             _entities = BravoDbContext.Set<T>();
         }
 

@@ -10,15 +10,17 @@ namespace ThreadPoolLesson
 {
     internal class Program
     {
+        static CountdownEvent CountdownEvent = new CountdownEvent(10);
         static void Foo(object index)
         {
             Console.WriteLine($"Foo Started: {Thread.CurrentThread.IsThreadPoolThread}\t{Thread.CurrentThread.ManagedThreadId}\t {Thread.CurrentThread.IsBackground}");
+            Thread.Sleep(100);
         }
 
 
         static void ThreadExample()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
                 Thread thread = new Thread(Foo);
                 thread.Start(i);
@@ -27,23 +29,26 @@ namespace ThreadPoolLesson
 
         static void ThreadPoolExample()
         {
-            for (int i = 0; i < 10; i++)
+            var operation = 100;
+
+            using (var countdown = new CountdownEvent(operation))
             {
-                ThreadPool.QueueUserWorkItem(new WaitCallback(param => Foo(i)));
+                for (int i = 0; i < operation; i++)
+                {
+                    ThreadPool.QueueUserWorkItem(new WaitCallback(param =>
+                    {
+                        Console.WriteLine($"Foo Started: {Thread.CurrentThread.IsThreadPoolThread}\t{Thread.CurrentThread.ManagedThreadId}\t {Thread.CurrentThread.IsBackground}");
+                        Thread.Sleep(100);
+                        countdown.Signal();
+                    }));
+                }
+                countdown.Wait();
+                Console.WriteLine();
             }
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Process.GetCurrentProcess().Threads.Count);
-
-            ProcessThreadCollection thread_count = Process.GetCurrentProcess().Threads;
-
-            foreach (ProcessThread item in thread_count)
-            {
-                Console.WriteLine(item.ThreadState);
-            }
-
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
@@ -53,23 +58,15 @@ namespace ThreadPoolLesson
             var a = stopwatch.Elapsed;
             stopwatch.Reset();
 
-
             stopwatch.Start();
             ThreadPoolExample();
             stopwatch.Stop();
             var b = stopwatch.Elapsed;
             stopwatch.Reset();
 
-            Thread.Sleep(1000);
+            Thread.Sleep(10);
             Console.WriteLine(a);
             Console.WriteLine(b);
-            Console.WriteLine(Process.GetCurrentProcess().Threads.Count);
-
-            thread_count = Process.GetCurrentProcess().Threads;
-            foreach (ProcessThread item in thread_count)
-            {
-                Console.WriteLine(item.ThreadState);
-            }
         }
     }
 }
