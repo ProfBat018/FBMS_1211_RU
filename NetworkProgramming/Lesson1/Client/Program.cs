@@ -3,7 +3,7 @@ using System.Net.Sockets;
 using System.Text;
 
 IPAddress address = IPAddress.Parse("10.1.10.13");
-IPEndPoint endPoint = new IPEndPoint(address, 5050);
+IPEndPoint endPoint = new IPEndPoint(address, 49714);
 Socket socket = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
 

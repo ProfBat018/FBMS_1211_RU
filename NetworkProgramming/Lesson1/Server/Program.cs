@@ -2,9 +2,22 @@
 using System.Net.Sockets;
 using System.Text;
 
-IPAddress address = IPAddress.Parse("10.1.10.13");
-IPEndPoint endPoint = new IPEndPoint(address, 49714);
-Socket socket = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+IPAddress? address = IPAddress.Any;
+var host = Dns.GetHostEntry(Dns.GetHostName());
+var addressList = host.AddressList;
+
+foreach (var ip in addressList)
+{
+    if (ip.AddressFamily == AddressFamily.InterNetwork)
+    {
+        address = ip;
+    }
+}
+
+
+IPEndPoint endPoint = new IPEndPoint(address, 12001);
+Socket socket = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
 
 try
 {

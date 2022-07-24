@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\bin\Debug\net6.0\Host.exe
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\bin\Debug\net6.0\Host.deps.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\bin\Debug\net6.0\Host.runtimeconfig.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\bin\Debug\net6.0\Host.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\bin\Debug\net6.0\Host.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\refint\Host.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\Host.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\Lesson1\Host\obj\Debug\net6.0\ref\Host.dll
