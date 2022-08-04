@@ -3,9 +3,7 @@ using System.Net.Sockets;
 using System.Text;
 
 var address = IPAddress.Parse("224.0.0.1");
-
 var socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-
 var endpoint = new IPEndPoint(IPAddress.Any, 12001);
 
 socket.Bind(endpoint);
