@@ -1,0 +1,31 @@
+﻿<Window x:Class="FTP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FTP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0">
+            <Button Click="Download_OnClick" Width="400" Content="Download" />
+            <Button Click="Upload_OnClick" Width="400" Content="Upload" />
+        </DockPanel>
+
+        <DockPanel Grid.Row="1">
+            <StackPanel Width="400" DockPanel.Dock="Left">
+                <TextBlock Height="50" Name="DateTextBlock" />
+                <TextBlock Height="50" Name="FileNameTextBlock" />
+                <TextBlock Height="50" Name="SizeTextBlock" />
+                <Button Content="Delete" Height="50" Click="Delete_OnClick"/>
+            </StackPanel>
+            <ListBox Name="ContentBox" Width="400" DockPanel.Dock="Right" />
+        </DockPanel>
+    </Grid>
+
+</Window>
