@@ -23,6 +23,6 @@ catch (Exception ex)
 }
 finally
 {
-    socket.Shutdown(SocketShutdown.Both);   
+    socket.Shutdown(SocketShutdown.Both);
     socket.Close();
 }
