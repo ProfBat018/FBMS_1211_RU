@@ -1,0 +1,21 @@
+#box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+
+    #counter {
+        height: 20px;
+        margin: auto;
+    }
+}
+
+#green-box {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
