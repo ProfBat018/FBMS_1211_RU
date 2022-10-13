@@ -1,0 +1,117 @@
+@use 'navbar';
+
+@mixin RubicFont($size) {
+    font-family: 'Rubic';
+    font-size: $size;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.main-container {
+    margin: 0 5% 0 5%;
+    height: 100%;
+
+    .top-container {
+        margin-top: 15px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .card {
+            border-width: 10px;
+            border-radius: 20px;
+            background-color: rgba($color: #f0f0f0d0, $alpha: 1.0);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 3% 0 0 3%;
+            height: 350px;
+            width: 300px;
+
+
+            img {
+                border-width: 10px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                transition: 500ms cubic-bezier(0, 0, 0.2, 1);
+            }
+
+            .card-title {
+                @include RubicFont(18px);
+            }
+
+            .card-price {
+                display: flex;
+
+                h4 {
+                    margin: 0;
+                    @include RubicFont(14px);
+                }
+
+                i {
+                    width: 10px;
+                }
+            }
+
+            transition: 1s;
+
+            &:hover {
+                h4,
+                h3 {
+                    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                }
+
+                img {
+                    transform: scale(1.1);
+                }
+                
+            }
+        }
+    }
+}
