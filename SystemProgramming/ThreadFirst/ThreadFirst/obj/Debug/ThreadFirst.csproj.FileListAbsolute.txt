@@ -1,8 +1,0 @@
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\bin\Debug\ThreadFirst.pdb
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\obj\Debug\ThreadFirst.csproj.AssemblyReference.cache
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\obj\Debug\ThreadFirst.csproj.CoreCompileInputs.cache
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\obj\Debug\ThreadFirst.pdb
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\bin\Debug\ThreadFirst.exe.config
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\bin\Debug\ThreadFirst.exe
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\obj\Debug\ThreadFirst.csproj.SuggestedBindingRedirects.cache
-C:\Work\FBMS_1211_RU\SystemProgramming\ThreadFirst\ThreadFirst\obj\Debug\ThreadFirst.exe
