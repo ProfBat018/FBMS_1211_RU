@@ -1,0 +1,42 @@
+/* ul {
+    color: lawngreen;
+} */
+
+/* p {
+    color:hwb(120 26% 38%); 
+    font-family: Arial;
+}
+
+.big-green-text {
+    color: green;
+    font-size: 30px;
+}
+
+.small-times-text {
+    font-family:'Times New Roman';
+    font-size: 10px;
+}
+*/
+
+@font-face {
+    font-family: 'Roboto-Italic';
+    src: url("/fonts/RobotoMono-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: 'RobotoMono';
+    src: url("/fonts/RobotoMono-VariableFont_wght.ttf");
+}
+
+#title-text {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Roboto-Italic";
+}
+
+.cat-img {
+    content: url("/img/flying-cat.jpg");
+}
+
+
+
+

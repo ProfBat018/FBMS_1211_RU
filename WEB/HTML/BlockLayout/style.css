@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(220, 220, 220);
+}
+.container {
+    margin: 0 10% 0 10%;
+}
+
+.left-column {
+    width: fit-content;
+    margin: 0 10% 0 10%;
+    float: left;
+}
+
+.navbar-list {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(220, 220, 220);
+}
+
+.navbar-item {
+    float: left;
+}
+
+.navbar-item a {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-item a:hover {
+    background-color: rgb(76, 75, 75);
+}
+
+#home {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
