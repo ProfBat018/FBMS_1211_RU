@@ -1,6 +1,0 @@
-{
-  "ConnectionStrings": {
-    "BravoDbStep": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BravoDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
-    "BravoDb": "Data Source=DESKTOP-G9V10DT;Initial Catalog=BravoDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-  }
-}

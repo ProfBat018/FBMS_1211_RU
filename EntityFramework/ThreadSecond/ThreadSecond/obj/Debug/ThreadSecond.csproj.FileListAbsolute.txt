@@ -1,8 +1,0 @@
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\bin\Debug\ThreadSecond.exe.config
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\bin\Debug\ThreadSecond.exe
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\bin\Debug\ThreadSecond.pdb
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\obj\Debug\ThreadSecond.csproj.AssemblyReference.cache
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\obj\Debug\ThreadSecond.csproj.SuggestedBindingRedirects.cache
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\obj\Debug\ThreadSecond.csproj.CoreCompileInputs.cache
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\obj\Debug\ThreadSecond.exe
-C:\Users\e.azimov\FBMS_1211_RU\EntityFramework\ThreadSecond\ThreadSecond\obj\Debug\ThreadSecond.pdb
