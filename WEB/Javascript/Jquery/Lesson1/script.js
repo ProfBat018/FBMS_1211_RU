@@ -24,19 +24,19 @@
 // });
 
 
-// $("button").on('click', function () {
-//   $("button").toggleClass(function () {
-//     if ($(this).is(".btn-light")) {
-//       return "btn-dark";
-//     } else {
-//       return "btn-light";
-//     }
-//   });
-// });
-
 $("button").on('click', function () {
-   $('.my-text').fadeToggle();
+  $("button").toggleClass(function () {
+    if ($(this).is(".btn-light")) {
+      return "btn-dark";
+    } else {
+      return "btn-light";
+    }
   });
+});
+
+// $("button").on('click', function () {
+//    $('.my-text').fadeToggle();
+//   });
 
 // $('.my-text').css('color', 'blue');
 

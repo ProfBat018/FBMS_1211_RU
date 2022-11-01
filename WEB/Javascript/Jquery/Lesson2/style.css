@@ -1,0 +1,26 @@
+.city-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.city-list .city-elem {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-color: white;
+  border-radius: 5px;
+}
+.city-list .city-elem .city-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.city-list .city-elem .city-title h1 {
+  padding-left: 15px;
+}
+.city-list .city-elem .city-title .icon {
+  padding-right: 15px;
+}
+.city-list .city-elem .city-desc {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
