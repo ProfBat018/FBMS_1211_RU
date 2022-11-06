@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script defer src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script defer src="/script.js"></script>
-    
+
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>IndexedDb</title>
 </head>
 
 <body>
-    
-    
+    <div class="container">
+        <div class="row">
+            <div class="input-group">
+                <input id="search-box" type="search" class="form-control border-dark" placeholder="City Name"
+                    aria-label="City Name" />
+                <button id="search-btn" type="button" class="btn btn-outline-dark">Search</button>
+            </div>
+        </div>
+        <div class="city-list">
+            <div class="template my-shadow">
+                <div class="city-elem">
+                    <div class="city-title">
+                        <h1>
+                            Baku
+                        </h1>
+                        <div class="icon">
+                            <p><i class="fa fa-plus"></i></p>
+                        </div>
+                    </div>
+                    <div class="city-desc">
+                        <p id="temp"></p>
+                        <p id="country"></p>
+                    </div>
+                </div>
+            </div>
 </body>
+
 </html>
