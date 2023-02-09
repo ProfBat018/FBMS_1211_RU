@@ -1,0 +1,15 @@
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\bin\Debug\net6.0\UML1.exe
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\bin\Debug\net6.0\UML1.deps.json
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\bin\Debug\net6.0\UML1.runtimeconfig.json
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\bin\Debug\net6.0\UML1.dll
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\bin\Debug\net6.0\UML1.pdb
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.csproj.AssemblyReference.cache
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.AssemblyInfoInputs.cache
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.AssemblyInfo.cs
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.csproj.CoreCompileInputs.cache
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.dll
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\refint\UML1.dll
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.pdb
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\UML1.genruntimeconfig.cache
+C:\Work\1211_RU\DesignPatterns\UML1\UML1\obj\Debug\net6.0\ref\UML1.dll
