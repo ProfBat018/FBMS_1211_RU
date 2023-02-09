@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Rubik-Italic';
+    src: url(/resources/fonts/Rubik-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Rubic';
+    src: url(/resources/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@mixin RubicFont($size) {
+    font-family: 'Rubic';
+    font-size: $size;
+}
+
+header {
+    background-color: rgba($color: #2c4efb, $alpha: 1.0);
+}
+
+ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+li {
+    @include RubicFont(20px);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+   
+
+    &:hover {
+        cursor: pointer;
+        color: #005994;
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    background-color: rgba($color: #f0f0f0d0, $alpha: 1.0);
+    display: flex;
+
+    .nav-logo {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        .logo-container {
+            height: 90px;
+            display: flex;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+
+           
+        }
+
+    }
+
+    .center-nav-list {
+        display:flex;
+        align-items: center;
+
+        .burger-menu {
+            display: none;
+            i {
+                width: 30px;
+            }
+        }
+        width: 40%;
+    }
+
+    .right-nav-panel {
+        width: 20%;
+
+        ul {
+            justify-content: space-between;
+        }
+    }
+}
