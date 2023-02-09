@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\bin\Debug\net6.0\Async.exe
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\bin\Debug\net6.0\Async.deps.json
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\bin\Debug\net6.0\Async.runtimeconfig.json
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\bin\Debug\net6.0\Async.dll
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\bin\Debug\net6.0\Async.pdb
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.dll
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\refint\Async.dll
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.pdb
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\Async.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Async\Async\obj\Debug\net6.0\ref\Async.dll

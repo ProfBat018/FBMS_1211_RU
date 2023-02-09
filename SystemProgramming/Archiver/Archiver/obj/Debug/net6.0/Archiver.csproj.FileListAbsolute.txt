@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\bin\Debug\net6.0\Archiver.exe
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\bin\Debug\net6.0\Archiver.deps.json
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\bin\Debug\net6.0\Archiver.runtimeconfig.json
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\bin\Debug\net6.0\Archiver.dll
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\bin\Debug\net6.0\Archiver.pdb
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.dll
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\refint\Archiver.dll
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.pdb
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\Archiver.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\SystemProgramming\Archiver\Archiver\obj\Debug\net6.0\ref\Archiver.dll
