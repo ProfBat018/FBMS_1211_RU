@@ -1,0 +1,18 @@
+﻿@using ShowroomRepository.Model;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Person;
+
+<div class="col-sm-6">
+<div class="card text-center">
+    <div class="card-header">@Model.Id</div>
+    <div class="card-body">
+        <h5 class="card-title">@($"{Model.Name}\t{Model.Surname}")</h5>
+        <p class="card-text">@Model.Age</p>
+    </div>
+    <div class="card-footer text-muted">Person</div>
+</div>
+</div>

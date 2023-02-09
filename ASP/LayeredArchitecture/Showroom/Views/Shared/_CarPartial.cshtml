@@ -1,0 +1,15 @@
+﻿@using ShowroomRepository.Model;
+@{
+}
+@model Car
+
+<div class="col-sm-2">
+    <div class="card">
+        <img src="@Model.ImageUrl" class="card-img-top" alt="Fissure in Sandstone" />
+        <div class="card-body">
+            <h3 class="card-title">@Model.Model</h3>
+            <h6 class="card-subtitle">@Model.Make</h6>
+            <a class="btn btn-primary">Open</a>
+        </div>
+    </div>
+</div>

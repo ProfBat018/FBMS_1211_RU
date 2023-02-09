@@ -1,0 +1,14 @@
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\bin\Debug\net6.0\ShowroomRepository.deps.json
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\bin\Debug\net6.0\ShowroomRepository.dll
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\bin\Debug\net6.0\ShowroomRepository.pdb
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.dll
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\refint\ShowroomRepository.dll
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.pdb
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ref\ShowroomRepository.dll
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\bin\Debug\net6.0\ShowroomRepository.runtimeconfig.json
+C:\Work\FBMS_1211_RU\ASP\LayeredArchitecture\ShowroomRepository\obj\Debug\net6.0\ShowroomRepository.genruntimeconfig.cache

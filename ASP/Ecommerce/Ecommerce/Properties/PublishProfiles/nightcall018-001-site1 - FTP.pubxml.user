@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <History>False|2023-01-31T15:40:54.2142048Z;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>ftp://win8013.site4now.net:21/ecommerce</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>01/03/2023 17:51:10</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>01/30/2023 19:29:28</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>04/06/2022 00:26:00</publishTime>
+    </File>
+    <File Include="Azure.Security.KeyVault.Certificates.dll">
+      <publishTime>08/12/2020 06:01:40</publishTime>
+    </File>
+    <File Include="Azure.Security.KeyVault.Secrets.dll">
+      <publishTime>08/12/2020 06:01:40</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>12/12/2022 12:47:08</publishTime>
+    </File>
+    <File Include="Ecommerce.deps.json">
+      <publishTime>01/31/2023 19:39:54</publishTime>
+    </File>
+    <File Include="Ecommerce.exe">
+      <publishTime>01/31/2023 19:39:40</publishTime>
+    </File>
+    <File Include="Ecommerce.pdb">
+      <publishTime>01/31/2023 19:39:39</publishTime>
+    </File>
+    <File Include="Ecommerce.runtimeconfig.json">
+      <publishTime>01/31/2023 19:35:51</publishTime>
+    </File>
+    <File Include="EcommerceDataAccess.pdb">
+      <publishTime>01/31/2023 19:35:48</publishTime>
+    </File>
+    <File Include="EcommerceServices.pdb">
+      <publishTime>01/31/2023 19:35:48</publishTime>
+    </File>
+    <File Include="Humanizer.dll">
+      <publishTime>01/29/2022 19:04:04</publishTime>
+    </File>
+    <File Include="libman.json">
+      <publishTime>01/06/2023 23:26:54</publishTime>
+    </File>
+    <File Include="MessagePack.Annotations.dll">
+      <publishTime>07/01/2020 17:05:20</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
