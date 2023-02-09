@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\bin\Debug\net6.0\MultiCastHost.exe
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\bin\Debug\net6.0\MultiCastHost.deps.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\bin\Debug\net6.0\MultiCastHost.runtimeconfig.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\bin\Debug\net6.0\MultiCastHost.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\bin\Debug\net6.0\MultiCastHost.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\refint\MultiCastHost.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\MultiCastHost.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\NetworkCast\obj\Debug\net6.0\ref\MultiCastHost.dll

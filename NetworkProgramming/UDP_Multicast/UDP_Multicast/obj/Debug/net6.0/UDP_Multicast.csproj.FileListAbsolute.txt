@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\bin\Debug\net6.0\UDP_Multicast.exe
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\bin\Debug\net6.0\UDP_Multicast.deps.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\bin\Debug\net6.0\UDP_Multicast.runtimeconfig.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\bin\Debug\net6.0\UDP_Multicast.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\bin\Debug\net6.0\UDP_Multicast.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\refint\UDP_Multicast.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\UDP_Multicast.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\UDP_Multicast\UDP_Multicast\obj\Debug\net6.0\ref\UDP_Multicast.dll

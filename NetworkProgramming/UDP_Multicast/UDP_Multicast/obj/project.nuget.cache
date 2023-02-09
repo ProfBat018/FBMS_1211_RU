@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "F17xAosUuIOy6SsKYbJwGQpJzoUeHBIlWh2IxhtM07bDrTfaug8OxKlapMAJG8x2pyb0fAuxBc6r9JoR8yVaWA==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\FBMS_1211_RU\\NetworkProgramming\\UDP_Multicast\\UDP_Multicast\\UDP_Multicast.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Wayne\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Wayne\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\bin\Debug\net6.0\Host2.exe
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\bin\Debug\net6.0\Host2.deps.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\bin\Debug\net6.0\Host2.runtimeconfig.json
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\bin\Debug\net6.0\Host2.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\bin\Debug\net6.0\Host2.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\refint\Host2.dll
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.pdb
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\Host2.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\NetworkProgramming\NetworkCast\Host2\obj\Debug\net6.0\ref\Host2.dll
