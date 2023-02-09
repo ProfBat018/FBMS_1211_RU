@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "B6/J5YsqpXpin62RnQ904k/XmEd0F/b83X4kJLPUyVeprlsvMHqmTKc4mxW/howMEtkuzSjrOySGEhjmyrW9AA==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\FBMS_1211_RU\\WPF\\MVVM_Views\\MVVM_Views\\MVVM_Views.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elvin\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\simpleinjector\\5.3.3\\simpleinjector.5.3.3.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

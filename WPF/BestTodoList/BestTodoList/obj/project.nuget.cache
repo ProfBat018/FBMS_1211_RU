@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NMzOL9Tv4kbC3O6qEIISymA7hK3slTLLixbgygQfH3bDDA2E9QQPiYnmFo7DVCfVp6w2tdDMapeUsQIHK2txTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elvin\\RiderProjects\\1211\\BestTodoList\\BestTodoList\\BestTodoList.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elvin\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
