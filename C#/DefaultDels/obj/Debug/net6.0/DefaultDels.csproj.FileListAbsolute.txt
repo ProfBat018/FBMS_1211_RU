@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\bin\Debug\net6.0\DefaultDels.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\bin\Debug\net6.0\DefaultDels.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\bin\Debug\net6.0\DefaultDels.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\bin\Debug\net6.0\DefaultDels.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\bin\Debug\net6.0\ref\DefaultDels.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\bin\Debug\net6.0\DefaultDels.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\ref\DefaultDels.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\DefaultDels\obj\Debug\net6.0\DefaultDels.genruntimeconfig.cache

@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\bin\Debug\net6.0\Structures.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\bin\Debug\net6.0\Structures.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\bin\Debug\net6.0\Structures.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\bin\Debug\net6.0\Structures.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\bin\Debug\net6.0\ref\Structures.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\bin\Debug\net6.0\Structures.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\ref\Structures.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Structures\obj\Debug\net6.0\Structures.genruntimeconfig.cache

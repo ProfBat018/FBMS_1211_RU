@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\bin\Release\net6.0\Tuples.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\bin\Release\net6.0\Tuples.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\bin\Release\net6.0\Tuples.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\bin\Release\net6.0\Tuples.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\bin\Release\net6.0\ref\Tuples.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\bin\Release\net6.0\Tuples.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\ref\Tuples.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\Tuples\obj\Release\net6.0\Tuples.genruntimeconfig.cache

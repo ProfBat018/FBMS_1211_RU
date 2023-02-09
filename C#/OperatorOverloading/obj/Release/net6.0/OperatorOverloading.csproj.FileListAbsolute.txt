@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\bin\Release\net6.0\OperatorOverloading.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\bin\Release\net6.0\OperatorOverloading.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\bin\Release\net6.0\OperatorOverloading.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\bin\Release\net6.0\OperatorOverloading.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\bin\Release\net6.0\ref\OperatorOverloading.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\bin\Release\net6.0\OperatorOverloading.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\ref\OperatorOverloading.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\OperatorOverloading\obj\Release\net6.0\OperatorOverloading.genruntimeconfig.cache

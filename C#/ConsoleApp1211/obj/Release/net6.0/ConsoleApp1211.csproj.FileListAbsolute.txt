@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\bin\Release\net6.0\ConsoleApp1211.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\bin\Release\net6.0\ConsoleApp1211.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\bin\Release\net6.0\ConsoleApp1211.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\bin\Release\net6.0\ConsoleApp1211.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\bin\Release\net6.0\ref\ConsoleApp1211.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\bin\Release\net6.0\ConsoleApp1211.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ref\ConsoleApp1211.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\ConsoleApp1211\obj\Release\net6.0\ConsoleApp1211.genruntimeconfig.cache

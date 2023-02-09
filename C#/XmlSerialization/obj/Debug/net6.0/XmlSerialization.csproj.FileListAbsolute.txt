@@ -1,0 +1,15 @@
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\bin\Debug\net6.0\XmlSerialization.exe
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\bin\Debug\net6.0\XmlSerialization.deps.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\bin\Debug\net6.0\XmlSerialization.runtimeconfig.json
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\bin\Debug\net6.0\XmlSerialization.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\bin\Debug\net6.0\ref\XmlSerialization.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\bin\Debug\net6.0\XmlSerialization.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.csproj.AssemblyReference.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.AssemblyInfoInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.AssemblyInfo.cs
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.csproj.CoreCompileInputs.cache
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\ref\XmlSerialization.dll
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.pdb
+C:\Users\elvin\RiderProjects\FBMS_1211_RU_Csharp\XmlSerialization\obj\Debug\net6.0\XmlSerialization.genruntimeconfig.cache
