@@ -1,0 +1,15 @@
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\bin\Debug\net6.0\UnitTesting1.exe
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\bin\Debug\net6.0\UnitTesting1.deps.json
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\bin\Debug\net6.0\UnitTesting1.runtimeconfig.json
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\bin\Debug\net6.0\UnitTesting1.dll
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\bin\Debug\net6.0\UnitTesting1.pdb
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.csproj.AssemblyReference.cache
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.AssemblyInfoInputs.cache
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.AssemblyInfo.cs
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.dll
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\refint\UnitTesting1.dll
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.pdb
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\UnitTesting1.genruntimeconfig.cache
+C:\Work\FBMS_1211_RU\Testing\UnitTesting1\UnitTesting1\obj\Debug\net6.0\ref\UnitTesting1.dll
