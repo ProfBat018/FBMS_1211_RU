@@ -132,5 +132,7 @@ namespace Ecommerce.Areas.Admin.Controllers
             var products = _unitOfWork!.Product!.GetAll(includeProperties: "Category,CoverType");
             return Json(new { data = products }); // return anonym data type
         }
+
+        public void foo() => _unitOfWork.Product.GetFirstOrDefault();
     }
 }
