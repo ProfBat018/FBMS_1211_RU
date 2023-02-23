@@ -1,5 +1,0 @@
-{
-  "Connectionstrings": {
-    "Default": "Data Source=WAYNE;Initial Catalog=Showroom;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-  }
-}
