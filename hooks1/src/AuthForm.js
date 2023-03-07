@@ -37,6 +37,7 @@ function AuthForm(props) {
         );
 }
 
+
 // class AuthForm extends Component {
 //     constructor() {
 //         super();
