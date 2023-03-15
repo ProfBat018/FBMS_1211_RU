@@ -1,14 +1,13 @@
 Plan:
-
 useContext
-useCallback
-useEffect(class components...)
+useCallback+
+useEffect(class components...)+
 useReducer
 contextApi
 Redux
-Валидация форм
+Валидация форм+
 Two-way binding
-react-routing
+react-routing+
 React Fragments
 React portals
 

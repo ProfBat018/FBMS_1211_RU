@@ -1,25 +1,44 @@
 import logo from './logo.svg';
+import {useState, useEffect} from "react";
 import './App.css';
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //// Второй пример
+    const [count, setCount] = useState(0);
+    const [test, setTest] = useState(0);
+
+    useEffect(() => {
+        console.log(`useEffect`);
+        axios.get(`http://localhost:3001/users/`).then((res) => {
+            console.log(res.data);
+        });
+    }, [count, test]);
+
+    return (
+        <div className="App">
+            <h1>You clicked {count} times...</h1>
+            <button onClick={() => setCount(count + 1)}>Fetch</button>
+            <button onClick={() => setTest(test + 1)}>test</button>
+        </div>
+    );
+
+    //// Первый пример
+    // const [count, setCount] = useState(0);
+    //
+    // useEffect(() => {
+    //     console.log(`useEffected reacted`);
+    //     document.title = `Clicked: ${count}`;
+    // });
+    //
+    //
+    //
+    // return (
+    //     <div className="App">
+    //         <h1>You clicked {count} times...</h1>
+    //         <button onClick={() => {setCount(count + 1)}}>Click</button>
+    //     </div>
+    // );
 }
 
 export default App;

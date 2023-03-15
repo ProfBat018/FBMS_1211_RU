@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Header} from "antd/es/layout/layout";
 import {Button, Menu, ConfigProvider, Radio, Checkbox} from "antd";
 import MenuItem from "antd/es/menu/MenuItem";
@@ -70,6 +70,10 @@ const theme = {
 };
 
 function App() {
+
+    useEffect(() => {
+        console.log(themesRes());
+    })
     return (
         <ConfigProvider
             theme={{
@@ -93,7 +97,10 @@ function App() {
     );
 }
 
-
+const themesRes = async () => {
+    const result = (await fetch("https://localhost:7255/api/Themes"));
+    return await result.json();
+}
 
 export default App;
 
