@@ -3,12 +3,12 @@ useCallback+
 useEffect(class components...)+
 useReducer+
 contextApi+
-Redux
+Redux+
 Валидация форм+
-Two-way binding
-react-routing
-React Fragments
-React portals
+Two-way binding+
+react-routing+
+React Fragments+
+React portals+
 
 Книги обязательны к прочтению!!
 https://beta.reactjs.org/learn/describing-the-ui
