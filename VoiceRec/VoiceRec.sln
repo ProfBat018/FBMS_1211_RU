@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33513.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRec", "FaceRec.csproj", "{75CFADAB-07CE-4EE5-80B6-5C855DF2BEA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceRec", "VoiceRec.csproj", "{B7D5B212-0D80-4876-B622-1147BD1DC8A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{75CFADAB-07CE-4EE5-80B6-5C855DF2BEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75CFADAB-07CE-4EE5-80B6-5C855DF2BEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75CFADAB-07CE-4EE5-80B6-5C855DF2BEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75CFADAB-07CE-4EE5-80B6-5C855DF2BEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D5B212-0D80-4876-B622-1147BD1DC8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D5B212-0D80-4876-B622-1147BD1DC8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D5B212-0D80-4876-B622-1147BD1DC8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D5B212-0D80-4876-B622-1147BD1DC8A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {467E7837-A5C7-4DB3-8D79-CB24425248CE}
+		SolutionGuid = {733FD699-BD5A-4EDF-8E3C-4670C9BA374C}
 	EndGlobalSection
 EndGlobal
