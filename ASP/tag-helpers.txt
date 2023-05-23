@@ -1,3 +1,0 @@
-asp-validation-summary
-asp-validation-for
-asp-for
