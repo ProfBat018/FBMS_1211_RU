@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboAz", "TurboAz\TurboAz.csproj", "{36F702E0-7BAE-4373-B336-4D3B04002E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsApi", "CarsApi\CarsApi.csproj", "{50CB89AC-B3CE-4003-A5CE-3A41D9E8612D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36F702E0-7BAE-4373-B336-4D3B04002E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F702E0-7BAE-4373-B336-4D3B04002E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F702E0-7BAE-4373-B336-4D3B04002E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F702E0-7BAE-4373-B336-4D3B04002E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50CB89AC-B3CE-4003-A5CE-3A41D9E8612D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50CB89AC-B3CE-4003-A5CE-3A41D9E8612D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50CB89AC-B3CE-4003-A5CE-3A41D9E8612D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50CB89AC-B3CE-4003-A5CE-3A41D9E8612D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

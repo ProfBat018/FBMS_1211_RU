@@ -1,0 +1,22 @@
+﻿@page
+@model TurboAz.Pages.Cars
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    @foreach(var item in Model.Data.Cars)
+    {
+        <partial name="~/Pages/Shared/_CarPartial.cshtml" model="@item"/>
+    }
+</div>
+</body>
+</html>
