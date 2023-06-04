@@ -1,0 +1,12 @@
+version: "1.0"
+services:
+  front:
+    build:
+      context: .
+      dockerfile: Front/Dockerfile
+  back:
+    build:
+      context: .
+      dockerfile: Back/Dockerfile
+    ports:
+      - "8000:8000"
